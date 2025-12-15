@@ -6,6 +6,7 @@
 @theme {
   --font-clash-display: clashDisplay, clashDisplay Fallback, sans-serif;
   --font-helvetica: Helvetica, Helvetica Fallback, sans-serif;
+  --breakpoint-md: 900px;
 }
 
 body > div {
@@ -126,4 +127,9 @@ body > div {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.AccordionTrigger[data-state="open"] > .AccordionChevron {
+  transform: rotate(180deg) scale(1.6);
+  background-color: #eee;
 }

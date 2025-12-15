@@ -1,0 +1,33 @@
+import { Button } from "@/app/_components/ui/button";
+import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+
+export default function HeroText() {
+  return (
+    <div className="mx-5">
+      <h1 className="font-normal text-4xl mb-3 max-w-xl md:text-white">
+        North Bengaluru’s Most Promising Residential Investment
+      </h1>
+      <p className="text-xl font-light mb-4 max-w-lg md:text-white">
+        Premium homes in a well-connected location with exceptional long-term
+        value.
+      </p>
+      <Button
+        variant="default"
+        size="lg"
+        className="rounded-full mr-4 mt-4 bg-red-600 text-white text-base cursor-pointer"
+      >
+        Get Pricing Details
+      </Button>
+      <Button
+        variant="outline"
+        size="lg"
+        className=" bg-black text-white md:bg-white md:text-black rounded-full mt-4 text-base pr-1 cursor-pointer"
+      >
+        Book Site visit{" "}
+        <span className="bg-white text-black md:bg-black md:text-white rounded-full ml-2 p-2">
+          <ArrowUpRightIcon className="" />
+        </span>
+      </Button>
+    </div>
+  );
+}

@@ -10,8 +10,6 @@ const Helvetica = localFont({
   src: "_fonts/Helvetica-Oblique.ttf",
 });
 
-console.log(clashDisplay, Helvetica);
-
 export const metadata: Metadata = {
   title: "Vested",
   description: "Project Template for Vested",
