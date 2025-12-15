@@ -1,4 +1,9 @@
-export default function Marquee() {
+interface MarqueeProps {
+  primary: string;
+  secondary: string;
+}
+
+export default function Marquee(props: MarqueeProps) {
   return (
     <div className="overflow-hidden whitespace-nowrap bg-red-600 py-2">
       <div
@@ -9,9 +14,9 @@ export default function Marquee() {
       >
         {[...Array(6)].map((_, idx) => (
           <span key={idx} className="flex items-center">
-            <span>Nikoo Homes</span>
+            <span>{props.primary}</span>
             <span className="font-helvetica font-extralight ml-2">
-              We are now open for bookings
+              {props.secondary}
             </span>
             <span className="mx-8 opacity-30">|</span>
           </span>

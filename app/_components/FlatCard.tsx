@@ -9,13 +9,22 @@ import {
   DialogDescription,
 } from "@/app/_components/ui/dialog";
 
-export default function FlatCard() {
+interface FlatCardProps {
+  flat: {
+    title: string;
+    image: string;
+    plan: string;
+  };
+}
+
+export default function FlatCard(props: FlatCardProps) {
+
   return (
     <Dialog>
       <DialogTrigger>
-        <div className="relative text-white h-96 rounded-2xl overflow-hidden max-w-64 cursor-pointer">
+        <div className="relative text-white h-96 rounded-2xl overflow-hidden max-w-80 cursor-pointer">
           <Image
-            src="/assets/flats/Studio.jpg"
+            src={props.flat.image}
             alt="Flat 1"
             width={1000}
             height={1000}
@@ -23,7 +32,7 @@ export default function FlatCard() {
           />
           <div className="absolute bottom-0 left-0 w-full h-full bg-linear-to-t from-black/50 to-transparent pointer-events-none">
             <h3 className="absolute bottom-20 left-10 text-2xl font-light">
-              Studio
+             {props.flat.title}
             </h3>
             <div
               className="absolute bottom-10 left-10 border px-2 py-1 bg-transparent rounded-none text-base font-helvetica cursor-pointer"
@@ -35,11 +44,11 @@ export default function FlatCard() {
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Studio</DialogTitle>
+          <DialogTitle>{props.flat.title}</DialogTitle>
         </DialogHeader>
         <DialogDescription>
           <Image
-            src="/nikoo/studio-plan.jpg"
+            src={props.flat.plan}
             alt="Flat 1"
             width={3000}
             height={3000}

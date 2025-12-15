@@ -1,15 +1,19 @@
 import { Button } from "@/app/_components/ui/button";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
-export default function HeroText() {
+interface HeroTextProps {
+  heading: string;
+  subheading: string;
+}
+
+export default function HeroText(props: HeroTextProps) {
   return (
     <div className="mx-5">
       <h1 className="font-normal text-4xl mb-3 max-w-xl md:text-white">
-        North Bengaluru’s Most Promising Residential Investment
+       {props.heading}
       </h1>
       <p className="text-xl font-light mb-4 max-w-lg md:text-white">
-        Premium homes in a well-connected location with exceptional long-term
-        value.
+        {props.subheading}
       </p>
       <Button
         variant="default"

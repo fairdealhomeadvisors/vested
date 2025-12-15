@@ -148,14 +148,14 @@ export default function Footer() {
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <PhoneIcon className="w-5 h-5 text-zinc-400 mt-0.5 flex-shrink-0" />
+                <PhoneIcon className="w-5 h-5 text-zinc-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="text-zinc-300">+91 987 654 3210</p>
                   <p className="text-zinc-500 text-sm">Mon-Sat, 9am-7pm</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <EnvelopeIcon className="w-5 h-5 text-zinc-400 mt-0.5 flex-shrink-0" />
+                <EnvelopeIcon className="w-5 h-5 text-zinc-400 mt-0.5 shrink-0" />
                 <a
                   href="mailto:info@nikoohomes.com"
                   className="text-zinc-300 hover:text-white transition-colors duration-200"
@@ -164,7 +164,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <MapPinIcon className="w-5 h-5 text-zinc-400 mt-0.5 flex-shrink-0" />
+                <MapPinIcon className="w-5 h-5 text-zinc-400 mt-0.5 shrink-0" />
                 <p className="text-zinc-300">
                   123 Real Estate Avenue,<br />
                   Bangalore, Karnataka 560001
