@@ -8,6 +8,7 @@ import Marquee from "./_components/Marquee";
 import Map from "./_components/Map";
 import Faq from "./_components/Faq";
 import FlatGrid from "./_components/FlatGrid";
+import Footer from "./_components/Footer";
 
 export default function Home() {
   return (
@@ -43,6 +44,7 @@ export default function Home() {
         <section>
           <Faq />
         </section>
+        <Footer />
       </main>
     </>
   );
