@@ -19,7 +19,7 @@ export default function HeroEmbed({
   }
 
   return (
-    <section
+    <div
       className="flex flex-col-reverse justify-end md:block relative w-full overflow-hidden"
       style={{ minHeight }}
     >
@@ -38,6 +38,6 @@ export default function HeroEmbed({
 
       {/* Content */}
       <div className="relative z-10 p-4 ">{children}</div>
-    </section>
+    </div>
   );
 }

@@ -1,11 +1,17 @@
-export default function TextCallout() {
+interface TextCalloutProps {
+  location: string;
+  projectName: string;
+}
+
+export default function TextCallout(props: TextCalloutProps) { 
+
   return (
     <div className=" relative my-10 text-4xl text-center font-light">
       <h2 className="max-w-lg mx-auto px-2 md:ml-auto md:mr-30 py-10">
         Your <span className="font-helvetica font-light">Dream Home</span> in
-        North Bengaluru — Welcome to{" "}
+        {props.location} — Welcome to{" "}
         <strong className="font-helvetica font-light text-red-600">
-          Bhartiya Garden Estate
+          {props.projectName}
         </strong>
       </h2>
       <svg
