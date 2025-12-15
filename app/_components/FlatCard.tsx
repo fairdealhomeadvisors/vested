@@ -15,7 +15,7 @@ export default function FlatCard() {
       <DialogTrigger>
         <div className="relative text-white h-96 rounded-2xl overflow-hidden max-w-64 cursor-pointer">
           <Image
-            src="/assets/flats/studio.jpg"
+            src="/assets/flats/Studio.jpg"
             alt="Flat 1"
             width={1000}
             height={1000}
@@ -26,7 +26,6 @@ export default function FlatCard() {
               Studio
             </h3>
             <div
-              size="sm"
               className="absolute bottom-10 left-10 border px-2 py-1 bg-transparent rounded-none text-base font-helvetica cursor-pointer"
             >
               View Plan
