@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -22,8 +22,10 @@ import {
   CheckIcon,
   ArrowRightIcon,
   ArrowLeftIcon,
+  CheckCircleIcon,
 } from "@heroicons/react/24/outline";
 import { cn } from "@/app/_lib/utils";
+import { handleForm } from "../_actions/handleForm";
 
 const steps: { id: InquiryStep; label: string; icon: React.ElementType }[] = [
   { id: "preference", label: "Preference", icon: HomeIcon },
@@ -43,7 +45,29 @@ export default function InquiryModal() {
     resetForm,
   } = useInquiryModal();
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [phoneError, setPhoneError] = useState("");
+
   const currentStepIndex = steps.findIndex((s) => s.id === currentStep);
+
+  const validatePhone = (phone: string): boolean => {
+    const digitsOnly = phone.replace(/\D/g, "");
+    if (digitsOnly.length < 10) {
+      setPhoneError("Phone number must be at least 10 digits");
+      return false;
+    }
+    setPhoneError("");
+    return true;
+  };
+
+  const handlePhoneChange = (value: string) => {
+    // Only allow numbers
+    const numbersOnly = value.replace(/\D/g, "");
+    updateFormData({ phone: numbersOnly });
+    // Clear error when user starts typing
+    if (phoneError) setPhoneError("");
+  };
 
   const handleNext = () => {
     if (currentStepIndex < steps.length - 1) {
@@ -57,13 +81,38 @@ export default function InquiryModal() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-    alert("Thank you for your inquiry! We will get back to you soon.");
-    resetForm();
-    closeModal();
+    
+    // Validate phone before submission
+    if (!validatePhone(formData.phone)) {
+      return;
+    }
+    
+    setIsSubmitting(true);
+    
+    try {
+      await handleForm({
+        name: formData.name,
+        phone: formData.phone,
+        contactMode: formData.contactMode,
+        budget: formData.budget,
+        purpose: formData.purpose,
+      });
+      
+      setIsSubmitting(false);
+      setShowSuccess(true);
+      
+      // Show success message for 2 seconds then close
+      setTimeout(() => {
+        setShowSuccess(false);
+        resetForm();
+        closeModal();
+      }, 2000);
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setIsSubmitting(false);
+    }
   };
 
   const handleOpenChange = (open: boolean) => {
@@ -92,8 +141,31 @@ export default function InquiryModal() {
 
         {/* Form Content */}
         <form onSubmit={handleSubmit} className="bg-black text-white mt-0">
+          {/* Loading State */}
+          {isSubmitting && (
+            <div className="p-10 sm:p-16 flex flex-col items-center justify-center animate-in fade-in-0 duration-300">
+              <div className="relative">
+                <div className="w-16 h-16 border-4 border-zinc-700 border-t-emerald-500 rounded-full animate-spin" />
+              </div>
+              <p className="mt-6 text-lg text-zinc-400">Submitting your details...</p>
+            </div>
+          )}
+
+          {/* Success State */}
+          {showSuccess && (
+            <div className="p-10 sm:p-16 flex flex-col items-center justify-center animate-in fade-in-0 zoom-in-95 duration-500">
+              <div className="w-20 h-20 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                <CheckCircleIcon className="w-12 h-12 text-emerald-500" />
+              </div>
+              <h3 className="mt-6 text-2xl font-semibold text-white">Thank You!</h3>
+              <p className="mt-2 text-zinc-400 text-center">
+                We&apos;ve received your inquiry.<br />Our team will contact you shortly.
+              </p>
+            </div>
+          )}
+
           {/* Preference Step */}
-          {currentStep === "preference" && (
+          {!isSubmitting && !showSuccess && currentStep === "preference" && (
             <div className="p-5 sm:p-8 md:p-10 space-y-4 sm:space-y-6 animate-in fade-in-0 slide-in-from-bottom-20 duration-500">
               <div className="space-y-3">
                 <Label className="text-xl sm:text-2xl md:text-3xl font-light">
@@ -132,7 +204,7 @@ export default function InquiryModal() {
           )}
 
           {/* Budget Step */}
-          {currentStep === "budget" && (
+          {!isSubmitting && !showSuccess && currentStep === "budget" && (
             <div className="p-5 sm:p-8 md:p-10 space-y-4 sm:space-y-6 animate-in fade-in-0 slide-in-from-bottom-20 duration-500">
               <div className="space-y-3">
                 <Label className="text-xl sm:text-2xl md:text-3xl font-light">
@@ -194,7 +266,7 @@ export default function InquiryModal() {
           )}
 
           {/* Contact Step */}
-          {currentStep === "contact" && (
+          {!isSubmitting && !showSuccess && currentStep === "contact" && (
             <div className="p-5 sm:p-8 md:p-10 space-y-4 sm:space-y-6 animate-in fade-in-0 slide-in-from-bottom-20 duration-500">
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-sm font-medium">
@@ -216,11 +288,15 @@ export default function InquiryModal() {
                 <Input
                   id="phone"
                   type="tel"
-                  placeholder="+91 98765 43210"
+                  placeholder="9876543210"
                   value={formData.phone}
-                  onChange={(e) => updateFormData({ phone: e.target.value })}
+                  onChange={(e) => handlePhoneChange(e.target.value)}
                   required
+                  className={phoneError ? "border-red-500 focus-visible:ring-red-500" : ""}
                 />
+                {phoneError && (
+                  <p className="text-sm text-red-500">{phoneError}</p>
+                )}
               </div>
 
               <div className="space-y-2">
@@ -234,37 +310,39 @@ export default function InquiryModal() {
           )}
 
           {/* Navigation Buttons */}
-          <div className="flex items-center justify-between p-3 sm:p-4 bg-linear-to-br from-zinc-900 via-zinc-800 to-zinc-900">
-            <Button
-              type="button"
-              variant="ghost"
-              onClick={handlePrevious}
-              disabled={currentStepIndex === 0}
-              className={cn("gap-1 sm:gap-2 text-sm sm:text-base", currentStepIndex === 0 && "invisible")}
-            >
-              <ArrowLeftIcon className="w-3 h-3 sm:w-4 sm:h-4" />
-              Back
-            </Button>
-
-            {currentStepIndex < steps.length - 1 ? (
+          {!isSubmitting && !showSuccess && (
+            <div className="flex items-center justify-between p-3 sm:p-4 bg-linear-to-br from-zinc-900 via-zinc-800 to-zinc-900">
               <Button
                 type="button"
-                onClick={handleNext}
-                className="gap-1 sm:gap-2 text-base sm:text-xl bg-green-600 hover:bg-green-800 text-white"
+                variant="ghost"
+                onClick={handlePrevious}
+                disabled={currentStepIndex === 0}
+                className={cn("gap-1 sm:gap-2 text-sm sm:text-base", currentStepIndex === 0 && "invisible")}
               >
-                Continue
-                <ArrowRightIcon className="w-3 h-3 sm:w-4 sm:h-4" />
+                <ArrowLeftIcon className="w-3 h-3 sm:w-4 sm:h-4" />
+                Back
               </Button>
-            ) : (
-              <Button
-                type="submit"
-                className="gap-1 sm:gap-2 text-base sm:text-lg bg-emerald-600 hover:bg-emerald-700 text-white"
-              >
-                Submit
-                <CheckIcon className="w-3 h-3 sm:w-4 sm:h-4" />
-              </Button>
-            )}
-          </div>
+
+              {currentStepIndex < steps.length - 1 ? (
+                <Button
+                  type="button"
+                  onClick={handleNext}
+                  className="gap-1 sm:gap-2 text-base sm:text-xl bg-green-600 hover:bg-green-800 text-white"
+                >
+                  Continue
+                  <ArrowRightIcon className="w-3 h-3 sm:w-4 sm:h-4" />
+                </Button>
+              ) : (
+                <Button
+                  type="submit"
+                  className="gap-1 sm:gap-2 text-base sm:text-lg bg-emerald-600 hover:bg-emerald-700 text-white"
+                >
+                  Submit
+                  <CheckIcon className="w-3 h-3 sm:w-4 sm:h-4" />
+                </Button>
+              )}
+            </div>
+          )}
         </form>
       </DialogContent>
     </Dialog>

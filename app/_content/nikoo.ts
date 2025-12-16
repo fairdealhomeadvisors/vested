@@ -7,7 +7,7 @@ export default {
     videoUrl: "https://www.youtube.com/watch?v=-Zi1F9-Uqn8",
     whatsappUrl: "https://wa.me/919633441261",
     emailLink: "mailto:info@nikoohomes.com",
-    phoneNumber: "+91 96 33 44 1261",
+    phoneNumber: "+91 636 624 1261",
     heading: "North Bengaluru’s Most Promising Residential Investment",
     subheading: "Premium homes in a well-connected location with exceptional long-term value."
   },
