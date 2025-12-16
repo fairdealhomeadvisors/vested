@@ -7,7 +7,7 @@ export type InquiryStep = "preference" | "budget" | "contact";
 interface InquiryFormData {
   purpose: string;
   name: string;
-  email: string;
+  contactMode: string;
   phone: string;
   budget: string;
 }
@@ -26,8 +26,8 @@ interface InquiryModalContextType {
 const initialFormData: InquiryFormData = {
   purpose: "",
   name: "",
-  email: "",
   phone: "",
+  contactMode: "",
   budget: "",
 };
 
