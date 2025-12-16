@@ -12,6 +12,7 @@ import FlatGrid from "@/app/_components/FlatGrid";
 import Faq from "@/app/_components/Faq";
 import Footer from "@/app/_components/Footer";
 import InquiryModalAutoTrigger from "@/app/_components/InquiryModalAutoTrigger";
+import AnimateOnScroll from "@/app/_components/AnimateOnScroll";
 
 export default function Page() {
   return (
@@ -36,10 +37,12 @@ export default function Page() {
         </div>
       </section>
       <section>
-        <TextCallout
-          location={content.textCallout.location}
-          projectName={content.textCallout.projectName}
-        />
+        <AnimateOnScroll animation="fade-up">
+          <TextCallout
+            location={content.textCallout.location}
+            projectName={content.textCallout.projectName}
+          />
+        </AnimateOnScroll>
       </section>
       <section id="amenities" className="max-w-[1400px] mx-auto">
         <Amenities
@@ -57,24 +60,30 @@ export default function Page() {
         </div>
       </section>
       <section id="map">
-        <Map
-          mapEmbedUrl={content.map.mapEmbedUrl}
-          location={content.map.location}
-          directionsUrl={content.map.directionsUrl}
-          mapImage={content.map.mapImage}
-        />
+        <AnimateOnScroll animation="fade-up">
+          <Map
+            mapEmbedUrl={content.map.mapEmbedUrl}
+            location={content.map.location}
+            directionsUrl={content.map.directionsUrl}
+            mapImage={content.map.mapImage}
+          />
+        </AnimateOnScroll>
       </section>
       <section id="layouts" className="bg-black min-h-screen pb-20">
-        <h2 className="text-white text-2xl font-light text-center py-20">
-          What you get:{" "}
-          <strong className="font-helvetica">Apartments & Layouts</strong>
-        </h2>
+        <AnimateOnScroll animation="fade-up">
+          <h2 className="text-white text-2xl font-light text-center py-20">
+            What you get:{" "}
+            <strong className="font-helvetica">Apartments & Layouts</strong>
+          </h2>
+        </AnimateOnScroll>
         <FlatGrid flats={content.flats} />
       </section>
       <section id="FAQ" className="max-w-[1400px] mx-auto">
         <Faq faq={content.FAQ} />
       </section>
-      <Footer />
+      <AnimateOnScroll animation="fade-up">
+        <Footer />
+      </AnimateOnScroll>
     </main>
   );
 }

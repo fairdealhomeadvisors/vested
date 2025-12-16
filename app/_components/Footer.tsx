@@ -1,12 +1,8 @@
-"use client";
-
 import Link from "next/link";
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import { InquiryModalTrigger } from "./InquiryModalTrigger";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="bg-zinc-950 text-white font-clash-display">
       {/* CTA Section */}
@@ -214,7 +210,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-zinc-500 text-sm">
-              © {currentYear} Nikoo Homes. All rights reserved.
+              © 2025 Nikoo Homes. All rights reserved.
             </p>
             <p className="text-zinc-500 text-sm">
               RERA Registration: PRM/KA/RERA/1251/446/PR/200421/003456
@@ -225,5 +221,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-
