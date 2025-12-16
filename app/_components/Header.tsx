@@ -12,7 +12,7 @@ interface HeaderProps {
 
 export default function Header(props: HeaderProps) {
   return (
-    <div className="p-5 flex items-start justify-between">
+    <div className="p-5 flex items-start justify-between flex-wrap">
       <div className="md:text-white">
         <span className="font-semibold mr-1">{props.title?.split(" ")[0]}</span>
         <span>{props.title?.split(" ")?.slice(1).join(" ")}</span>
@@ -24,7 +24,7 @@ export default function Header(props: HeaderProps) {
         >
           Amenities
         </Link>
-        <Button variant="outline" className="rounded-full cursor-pointer">
+        <Button variant="outline" className="rounded-full bg-transparent text-white cursor-pointer">
           Pricing
         </Button>
         <Link
@@ -32,6 +32,12 @@ export default function Header(props: HeaderProps) {
           className="cursor-pointer border-white border px-3 py-1 rounded-full text-white hover:text-black hover:bg-white transition-colors duration-200"
         >
           Location
+        </Link>
+        <Link
+          href="#layouts"
+          className="cursor-pointer border-white border px-3 py-1 rounded-full text-white hover:text-black hover:bg-white transition-colors duration-200"
+        >
+          Floor plans
         </Link>
         <Link
           href="#FAQ"

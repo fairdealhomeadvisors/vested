@@ -37,7 +37,7 @@ export default function Page() {
           projectName={content.textCallout.projectName}
         />
       </section>
-      <section>
+      <section id="amenities">
         <Amenities
           title={content.amenities.title}
           image={content.amenities.image}
@@ -52,7 +52,7 @@ export default function Page() {
           />
         </div>
       </section>
-      <section>
+      <section id="map">
         <Map
           mapEmbedUrl={content.map.mapEmbedUrl}
           location={content.map.location}
@@ -60,15 +60,15 @@ export default function Page() {
           mapImage={content.map.mapImage}
         />
       </section>
-      <section className="bg-black min-h-screen pb-20">
+      <section id="layouts" className="bg-black min-h-screen pb-20">
         <h2 className="text-white text-2xl font-light text-center py-20">
           What you get:{" "}
           <strong className="font-helvetica">Apartments & Layouts</strong>
         </h2>
         <FlatGrid flats={content.flats} />
       </section>
-      <section>
-        <Faq />
+      <section id="FAQ">
+        <Faq faq={content.FAQ} />
       </section>
       <Footer />
     </main>

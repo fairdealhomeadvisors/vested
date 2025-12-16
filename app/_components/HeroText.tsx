@@ -10,7 +10,7 @@ export default function HeroText(props: HeroTextProps) {
   return (
     <div className="mx-5">
       <h1 className="font-normal text-4xl mb-3 max-w-xl md:text-white">
-       {props.heading}
+        {props.heading}
       </h1>
       <p className="text-xl font-light mb-4 max-w-lg md:text-white">
         {props.subheading}
@@ -25,11 +25,11 @@ export default function HeroText(props: HeroTextProps) {
       <Button
         variant="outline"
         size="lg"
-        className=" bg-black text-white md:bg-white md:text-black rounded-full mt-4 text-base pr-1 cursor-pointer"
+        className="group bg-black text-white md:bg-white md:text-black rounded-full mt-4 text-base pr-1 cursor-pointer hover:bg-black hover:text-white transition-colors duration-200"
       >
         Book Site visit{" "}
-        <span className="bg-white text-black md:bg-black md:text-white rounded-full ml-2 p-2">
-          <ArrowUpRightIcon className="" />
+        <span className="bg-white text-black md:bg-black md:text-white rounded-full ml-2 p-2 group-hover:bg-white group-hover:text-black transition-colors duration-200">
+          <ArrowUpRightIcon />
         </span>
       </Button>
     </div>

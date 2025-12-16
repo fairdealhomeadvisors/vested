@@ -67,7 +67,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <Link
-                  href="/#amenities"
+                  href="#amenities"
                   className="text-zinc-300 hover:text-white transition-colors duration-200"
                 >
                   Amenities
@@ -75,15 +75,15 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/#pricing"
+                  href="#map"
                   className="text-zinc-300 hover:text-white transition-colors duration-200"
                 >
-                  Pricing
+                  Location
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/#layouts"
+                  href="#layouts"
                   className="text-zinc-300 hover:text-white transition-colors duration-200"
                 >
                   Floor Plans
@@ -91,7 +91,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/#faq"
+                  href="#FAQ"
                   className="text-zinc-300 hover:text-white transition-colors duration-200"
                 >
                   FAQ
@@ -151,7 +151,7 @@ export default function Footer() {
                 <PhoneIcon className="w-5 h-5 text-zinc-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="text-zinc-300">+91 987 654 3210</p>
-                  <p className="text-zinc-500 text-sm">Mon-Sat, 9am-7pm</p>
+                  <p className="text-zinc-500 text-sm">Mon-Sun, 9am-11pm</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
