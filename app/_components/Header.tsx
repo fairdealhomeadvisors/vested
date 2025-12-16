@@ -1,6 +1,8 @@
+"use client";
+
 import Link from "next/link";
-import { Button } from "@/app/_components/ui/button";
 import Menu from "./Menu";
+import { InquiryModalTrigger } from "./InquiryModalTrigger";
 
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 interface HeaderProps {
@@ -24,9 +26,13 @@ export default function Header(props: HeaderProps) {
         >
           Amenities
         </Link>
-        <Button variant="outline" className="rounded-full bg-transparent text-white cursor-pointer">
+        <InquiryModalTrigger
+          step="preference"
+          variant="outline"
+          className="rounded-full bg-transparent text-white border-white hover:text-black hover:bg-white"
+        >
           Pricing
-        </Button>
+        </InquiryModalTrigger>
         <Link
           href="#map"
           className="cursor-pointer border-white border px-3 py-1 rounded-full text-white hover:text-black hover:bg-white transition-colors duration-200"

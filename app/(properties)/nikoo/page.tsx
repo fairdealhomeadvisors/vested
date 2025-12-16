@@ -11,25 +11,29 @@ import Map from "@/app/_components/Map";
 import FlatGrid from "@/app/_components/FlatGrid";
 import Faq from "@/app/_components/Faq";
 import Footer from "@/app/_components/Footer";
+import InquiryModalAutoTrigger from "@/app/_components/InquiryModalAutoTrigger";
 
 export default function Page() {
   return (
     <main className="font-clash-display">
-      <section className="md:m-10 rounded-2xl overflow-hidden">
-        <HeroEmbed youtubeUrl={content.hero.videoUrl}>
-          <Header
-            title={Nikoo.title}
-            emailLink={content.hero.emailLink}
-            whatsappLink={content.hero.whatsappUrl}
-            phoneNumber={content.hero.phoneNumber}
-          />
-          <div className="md:mt-20">
-            <HeroText
-              heading={content.hero.heading}
-              subheading={content.hero.subheading}
+      <InquiryModalAutoTrigger delay={7000} />
+      <section className="max-w-[1400px] mx-auto">
+        <div className="md:m-10 rounded-2xl overflow-hidden">
+          <HeroEmbed youtubeUrl={content.hero.videoUrl}>
+            <Header
+              title={Nikoo.title}
+              emailLink={content.hero.emailLink}
+              whatsappLink={content.hero.whatsappUrl}
+              phoneNumber={content.hero.phoneNumber}
             />
-          </div>
-        </HeroEmbed>
+            <div className="md:mt-20">
+              <HeroText
+                heading={content.hero.heading}
+                subheading={content.hero.subheading}
+              />
+            </div>
+          </HeroEmbed>
+        </div>
       </section>
       <section>
         <TextCallout
@@ -37,7 +41,7 @@ export default function Page() {
           projectName={content.textCallout.projectName}
         />
       </section>
-      <section id="amenities">
+      <section id="amenities" className="max-w-[1400px] mx-auto">
         <Amenities
           title={content.amenities.title}
           image={content.amenities.image}
@@ -67,7 +71,7 @@ export default function Page() {
         </h2>
         <FlatGrid flats={content.flats} />
       </section>
-      <section id="FAQ">
+      <section id="FAQ" className="max-w-[1400px] mx-auto">
         <Faq faq={content.FAQ} />
       </section>
       <Footer />

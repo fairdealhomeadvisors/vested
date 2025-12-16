@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
+import { InquiryModalProvider } from "@/app/_context/InquiryModalContext";
+import InquiryModal from "@/app/_components/InquiryModal";
 
 const clashDisplay = localFont({
   src: "_fonts/ClashDisplay-Variable.woff2",
@@ -25,7 +27,10 @@ export default function RootLayout({
       <body
         className={`${clashDisplay.className} ${Helvetica.className} antialiased`}
       >
-        {children}
+        <InquiryModalProvider>
+          {children}
+          <InquiryModal />
+        </InquiryModalProvider>
       </body>
     </html>
   );

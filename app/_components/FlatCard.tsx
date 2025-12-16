@@ -52,7 +52,7 @@ export default function FlatCard(props: FlatCardProps) {
             alt="Flat 1"
             width={3000}
             height={3000}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover max-w-2xl"
           />
         </DialogDescription>
       </DialogContent>

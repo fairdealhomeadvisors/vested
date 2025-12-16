@@ -1,11 +1,45 @@
+"use client";
+
 import Link from "next/link";
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import { InquiryModalTrigger } from "./InquiryModalTrigger";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-zinc-950 text-white font-clash-display">
+      {/* CTA Section */}
+      <div className="border-b border-zinc-800">
+        <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl md:text-3xl font-semibold mb-2">
+                Ready to Find Your Perfect Home?
+              </h3>
+              <p className="text-zinc-400">
+                Start your journey today and let us help you every step of the way.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <InquiryModalTrigger
+                step="preference"
+                className="rounded-full bg-white text-zinc-900 hover:bg-zinc-100 px-6 py-3 h-auto text-base font-medium"
+              >
+                Get Started
+              </InquiryModalTrigger>
+              <InquiryModalTrigger
+                step="contact"
+                variant="outline"
+                className="rounded-full border-zinc-700 bg-zinc-700 text-white hover:bg-zinc-800 hover:text-white px-6 py-3 h-auto text-base font-medium"
+              >
+                Contact Us
+              </InquiryModalTrigger>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
