@@ -13,11 +13,13 @@ import Faq from "@/app/_components/Faq";
 import Footer from "@/app/_components/Footer";
 import InquiryModalAutoTrigger from "@/app/_components/InquiryModalAutoTrigger";
 import AnimateOnScroll from "@/app/_components/AnimateOnScroll";
+import FloatingCTA from "@/app/_components/FloatingCTA";
 
 export default function Page() {
   return (
     <main className="font-clash-display">
       <InquiryModalAutoTrigger delay={7000} />
+      <FloatingCTA />
       <section className="max-w-[1400px] mx-auto">
         <div className="md:m-10 rounded-2xl overflow-hidden">
           <HeroEmbed youtubeUrl={content.hero.videoUrl}>
