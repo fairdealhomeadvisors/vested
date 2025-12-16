@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { StaggerChildren, StaggerItem } from "./AnimateOnScroll";
 
 interface AmenitiesProps {
   title: string;
@@ -17,25 +18,23 @@ export default function Amenities(props: AmenitiesProps) {
           Amenities
         </h2>
         <h3 className="text-3xl my-5">{props.title}</h3>
-        <ul>
-
+        <StaggerChildren staggerDelay={0.1}>
           {props.items.map((item, index) => (
-            <li
-              key={index}
-              className="grid grid-cols-3 gap-5 md:gap-20 border-t border-gray-400 py-5"
-            >
-              <span className="text-2xl text-red-600">0{index + 1}</span>
-              <h4 className="uppercase max-w-3xs col-span-2 md:col-span-1">
-                {item.title}
-              </h4>
-              <p className="text-gray-500 text-xs md:max-w-2xs col-span-3 md:col-span-1">
-                {item.description}
-              </p>
-            </li>
+            <StaggerItem key={index}>
+              <div className="grid grid-cols-3 gap-5 md:gap-20 border-t border-gray-400 py-5">
+                <span className="text-2xl text-red-600">0{index + 1}</span>
+                <h4 className="uppercase max-w-3xs col-span-2 md:col-span-1">
+                  {item.title}
+                </h4>
+                <p className="text-gray-500 text-xs md:max-w-2xs col-span-3 md:col-span-1">
+                  {item.description}
+                </p>
+              </div>
+            </StaggerItem>
           ))}
-        </ul>
+        </StaggerChildren>
       </div>
-      <div className="mx-10 md:mr-20 md:ml-0 rounded-2xl  md:max-w-sm overflow-hidden">
+      <div className="mx-10 md:mr-20 md:ml-0 rounded-2xl md:max-w-sm overflow-hidden">
         <Image
           src={props.image}
           alt="Amenities"

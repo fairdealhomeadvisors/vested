@@ -74,23 +74,26 @@ export default function Menu( props: MenuProps ) {
                 exit="exit"
               >
                 <motion.li className="cursor-pointer" variants={itemVariants}>
-                  <Link href="#amenities">Amenities</Link>
+                  <Link href="#amenities" onClick={handleMenuClose}>Amenities</Link>
                 </motion.li>
                 <motion.li className="cursor-pointer" variants={itemVariants}>
                   Pricing
                 </motion.li>
                 <motion.li className="cursor-pointer" variants={itemVariants}>
-                  <Link href="#map">Location</Link>
+                  <Link href="#map" onClick={handleMenuClose}>Location</Link>
                 </motion.li>
                 <motion.li className="cursor-pointer" variants={itemVariants}>
-                  <Link href="#FAQ">FAQ</Link>
+                  <Link href="#layouts" onClick={handleMenuClose}>Floor plans</Link>
+                </motion.li>
+                <motion.li className="cursor-pointer" variants={itemVariants}>
+                  <Link href="#FAQ" onClick={handleMenuClose}>FAQ</Link>
                 </motion.li>
               </motion.ul>
               <div className="flex items-center gap-5">
-                <Link href={props.emailLink}>
+                <Link href={props.emailLink} onClick={handleMenuClose}>
                   <EnvelopeIcon className="w-6 h-6 text-white" />
                 </Link>
-                <Link href={props.whatsappLink}>
+                <Link href={props.whatsappLink} onClick={handleMenuClose}>
                 <span className="text-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

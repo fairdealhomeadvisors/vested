@@ -98,5 +98,44 @@ export default {
       image: "/assets/flats/Loft.jpg",
       plan: "/nikoo/studio-plan.jpg",
     }
+  ],
+
+  FAQ: [
+    {
+      "question": "What types of homes are available in Bhartiya City Garden Estate?",
+      "answer": "Bhartiya City Garden Estate offers premium residential apartments and luxury homes with contemporary layouts designed to maximize natural light, ventilation, and privacy."
+    },
+    {
+      "question": "Is Bhartiya City Garden Estate a good investment?",
+      "answer": "Yes, the project is located in one of North Bangalore’s fastest-growing corridors with strong rental demand from nearby IT hubs, making it a good option for long-term appreciation and investment."
+    },
+    {
+      "question": "What is the price range of homes in Bhartiya City Garden Estate?",
+      "answer": "Prices vary depending on the unit type, size, floor, and view. Please register or contact us to receive the latest price list and payment plans."
+    },
+    {
+      "question": "Are there any special offers or pre-launch benefits available?",
+      "answer": "Limited-period offers, early-bird pricing, and flexible payment plans may be available. Register now to get access to current deals and exclusive offers."
+    },
+    {
+      "question": "Is Bhartiya City Garden Estate RERA approved?",
+      "answer": "Yes, Bhartiya City Garden Estate is RERA approved, ensuring legal compliance, transparency, and buyer protection."
+    },
+    {
+      "question": "What makes Nikoo Homes different from other developers?",
+      "answer": "Nikoo Homes by Bhartiya Group is known for international design standards, high-quality construction, integrated township living, and a strong track record of timely delivery."
+    },
+    {
+      "question": "Who should consider buying a home in Bhartiya City Garden Estate?",
+      "answer": "The project is ideal for IT professionals, families seeking a secure and green lifestyle, NRIs looking for long-term investment, and buyers upgrading to premium living."
+    },
+    {
+      "question": "Can I schedule a site visit to Bhartiya City Garden Estate?",
+      "answer": "Yes, you can book an assisted site visit with a complete walkthrough of the project by filling out the inquiry form or contacting our sales team."
+    },
+    {
+      "question": "How can I get more details about floor plans, pricing, and availability?",
+      "answer": "Fill out the lead form or contact us directly to receive the latest brochures, floor plans, price details, payment options, and availability status."
+    }
   ]
 };

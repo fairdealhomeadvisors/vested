@@ -1,3 +1,4 @@
+import { StaggerChildren, StaggerItem } from "./AnimateOnScroll";
 import FlatCard from "./FlatCard";
 
 interface FlatGridProps {
@@ -10,10 +11,15 @@ interface FlatGridProps {
 
 export default function FlatGrid(props: FlatGridProps) {
   return (
-    <div className="flex flex-wrap justify-center gap-10 max-w-7xl mx-auto">
+    <StaggerChildren
+      className="flex flex-wrap justify-center gap-10 max-w-7xl mx-auto"
+      staggerDelay={0.12}
+    >
       {props.flats.map((flat, index) => (
-        <FlatCard key={index} flat={flat} />
+        <StaggerItem key={index}>
+          <FlatCard flat={flat} />
+        </StaggerItem>
       ))}
-    </div>
+    </StaggerChildren>
   );
 }

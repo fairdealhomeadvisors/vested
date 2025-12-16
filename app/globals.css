@@ -9,6 +9,10 @@
   --breakpoint-md: 900px;
 }
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 body > div {
   font-family: var(--font-clash-display);
 }

@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
-import { Button } from "@/app/_components/ui/button";
+import { motion } from "motion/react";
 import Menu from "./Menu";
+import { InquiryModalTrigger } from "./InquiryModalTrigger";
 
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 interface HeaderProps {
@@ -12,7 +15,12 @@ interface HeaderProps {
 
 export default function Header(props: HeaderProps) {
   return (
-    <div className="p-5 flex items-start justify-between">
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+      className="p-5 flex items-start justify-between flex-wrap"
+    >
       <div className="md:text-white">
         <span className="font-semibold mr-1">{props.title?.split(" ")[0]}</span>
         <span>{props.title?.split(" ")?.slice(1).join(" ")}</span>
@@ -24,14 +32,24 @@ export default function Header(props: HeaderProps) {
         >
           Amenities
         </Link>
-        <Button variant="outline" className="rounded-full cursor-pointer">
+        <InquiryModalTrigger
+          step="preference"
+          variant="outline"
+          className="rounded-full bg-transparent text-white border-white hover:text-black hover:bg-white"
+        >
           Pricing
-        </Button>
+        </InquiryModalTrigger>
         <Link
           href="#map"
           className="cursor-pointer border-white border px-3 py-1 rounded-full text-white hover:text-black hover:bg-white transition-colors duration-200"
         >
           Location
+        </Link>
+        <Link
+          href="#layouts"
+          className="cursor-pointer border-white border px-3 py-1 rounded-full text-white hover:text-black hover:bg-white transition-colors duration-200"
+        >
+          Floor plans
         </Link>
         <Link
           href="#FAQ"
@@ -65,6 +83,6 @@ export default function Header(props: HeaderProps) {
       </div>
       {/* HAMBURGER MENU FOR MOBILE */}
       <Menu emailLink={props.emailLink} whatsappLink={props.whatsappLink} phoneNumber={props.phoneNumber} />
-    </div>
+    </motion.div>
   );
 }

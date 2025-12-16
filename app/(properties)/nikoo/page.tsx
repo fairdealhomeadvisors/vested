@@ -11,33 +11,42 @@ import Map from "@/app/_components/Map";
 import FlatGrid from "@/app/_components/FlatGrid";
 import Faq from "@/app/_components/Faq";
 import Footer from "@/app/_components/Footer";
+import InquiryModalAutoTrigger from "@/app/_components/InquiryModalAutoTrigger";
+import AnimateOnScroll from "@/app/_components/AnimateOnScroll";
+import FloatingCTA from "@/app/_components/FloatingCTA";
 
 export default function Page() {
   return (
     <main className="font-clash-display">
-      <section className="md:m-10 rounded-2xl overflow-hidden">
-        <HeroEmbed youtubeUrl={content.hero.videoUrl}>
-          <Header
-            title={Nikoo.title}
-            emailLink={content.hero.emailLink}
-            whatsappLink={content.hero.whatsappUrl}
-            phoneNumber={content.hero.phoneNumber}
-          />
-          <div className="md:mt-20">
-            <HeroText
-              heading={content.hero.heading}
-              subheading={content.hero.subheading}
+      <InquiryModalAutoTrigger delay={7000} />
+      <FloatingCTA />
+      <section className="max-w-[1400px] mx-auto">
+        <div className="md:m-10 rounded-2xl overflow-hidden">
+          <HeroEmbed youtubeUrl={content.hero.videoUrl}>
+            <Header
+              title={Nikoo.title}
+              emailLink={content.hero.emailLink}
+              whatsappLink={content.hero.whatsappUrl}
+              phoneNumber={content.hero.phoneNumber}
             />
-          </div>
-        </HeroEmbed>
+            <div className="md:mt-20">
+              <HeroText
+                heading={content.hero.heading}
+                subheading={content.hero.subheading}
+              />
+            </div>
+          </HeroEmbed>
+        </div>
       </section>
       <section>
-        <TextCallout
-          location={content.textCallout.location}
-          projectName={content.textCallout.projectName}
-        />
+        <AnimateOnScroll animation="fade-up">
+          <TextCallout
+            location={content.textCallout.location}
+            projectName={content.textCallout.projectName}
+          />
+        </AnimateOnScroll>
       </section>
-      <section>
+      <section id="amenities" className="max-w-[1400px] mx-auto">
         <Amenities
           title={content.amenities.title}
           image={content.amenities.image}
@@ -52,25 +61,31 @@ export default function Page() {
           />
         </div>
       </section>
-      <section>
-        <Map
-          mapEmbedUrl={content.map.mapEmbedUrl}
-          location={content.map.location}
-          directionsUrl={content.map.directionsUrl}
-          mapImage={content.map.mapImage}
-        />
+      <section id="map">
+        <AnimateOnScroll animation="fade-up">
+          <Map
+            mapEmbedUrl={content.map.mapEmbedUrl}
+            location={content.map.location}
+            directionsUrl={content.map.directionsUrl}
+            mapImage={content.map.mapImage}
+          />
+        </AnimateOnScroll>
       </section>
-      <section className="bg-black min-h-screen pb-20">
-        <h2 className="text-white text-2xl font-light text-center py-20">
-          What you get:{" "}
-          <strong className="font-helvetica">Apartments & Layouts</strong>
-        </h2>
+      <section id="layouts" className="bg-black min-h-screen pb-20">
+        <AnimateOnScroll animation="fade-up">
+          <h2 className="text-white text-2xl font-light text-center py-20">
+            What you get:{" "}
+            <strong className="font-helvetica">Apartments & Layouts</strong>
+          </h2>
+        </AnimateOnScroll>
         <FlatGrid flats={content.flats} />
       </section>
-      <section>
-        <Faq />
+      <section id="FAQ" className="max-w-[1400px] mx-auto">
+        <Faq faq={content.FAQ} />
       </section>
-      <Footer />
+      <AnimateOnScroll animation="fade-up">
+        <Footer />
+      </AnimateOnScroll>
     </main>
   );
 }
