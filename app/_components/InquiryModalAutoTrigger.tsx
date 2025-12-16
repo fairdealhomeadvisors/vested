@@ -12,12 +12,12 @@ export default function InquiryModalAutoTrigger({
   delay = 7000,
   step = "preference",
 }: InquiryModalAutoTriggerProps) {
-  const { openModal } = useInquiryModal();
+  const { openModal, isOpen } = useInquiryModal();
   const hasTriggered = useRef(false);
 
   useEffect(() => {
-    // Only trigger once
-    if (hasTriggered.current) return;
+    // Only trigger once and only if modal is not already open
+    if (hasTriggered.current || isOpen) return;
 
     const timer = setTimeout(() => {
       hasTriggered.current = true;
@@ -25,7 +25,7 @@ export default function InquiryModalAutoTrigger({
     }, delay);
 
     return () => clearTimeout(timer);
-  }, [delay, step, openModal]);
+  }, [delay, step, openModal, isOpen]);
 
   return null;
 }
