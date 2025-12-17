@@ -28,6 +28,7 @@ export default function Map(props: MapProps) {
               <div className="bg-white p-3 rounded-2xl shadow-2xl shadow-black/10">
                 <div className="rounded-xl overflow-hidden">
                   <iframe
+                    title="Google Maps Embed"
                     src={props.mapEmbedUrl}
                     width="100%"
                     height="300"
