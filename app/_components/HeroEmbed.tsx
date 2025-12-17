@@ -1,6 +1,3 @@
-"use client";
-
-import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 interface HeroEmbedProps {
@@ -16,74 +13,33 @@ export default function HeroEmbed({
   minHeight = "80vh",
   children,
 }: HeroEmbedProps) {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  // Load video when section comes into view
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  // Play video when it becomes visible
-  useEffect(() => {
-    if (isVisible && videoRef.current) {
-      videoRef.current.play().catch(() => {
-        // Autoplay might be blocked, that's okay
-      });
-    }
-  }, [isVisible]);
-
   return (
     <div
-      ref={containerRef}
       className="flex flex-col-reverse justify-end md:block relative w-full overflow-hidden"
       style={{ minHeight }}
     >
-      {/* Placeholder Image - shown until video loads */}
-      <div
-        className={`absolute inset-0 transition-opacity duration-700 ${
-          isVideoLoaded ? "opacity-0 pointer-events-none" : "opacity-100"
-        }`}
-      >
+      {/* Placeholder Image - fades out after video loads */}
+      <div className="absolute inset-0 pointer-events-none animate-[hero-fade-out_0.7s_ease-out_1.5s_forwards]">
         <Image
           src={placeholderImage}
           alt="Hero background"
           fill
           priority
+          fetchPriority="high"
           className="object-cover"
           sizes="100vw"
         />
       </div>
 
-      {/* Background Video - lazy loaded when in view */}
-      {isVisible && (
-        <video
-          ref={videoRef}
-          className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover"
-          src={videoSrc}
-          muted
-          loop
-          playsInline
-          preload="none"
-          onLoadedData={() => setIsVideoLoaded(true)}
-        />
-      )}
+      {/* Background Video */}
+      <video
+        className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover"
+        src={videoSrc}
+        muted
+        loop
+        playsInline
+        autoPlay
+      />
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40" />
