@@ -22,7 +22,7 @@ export default function Page() {
       <FloatingCTA />
       <section className="max-w-[1400px] mx-auto">
         <div className="md:m-10 md:rounded-2xl overflow-hidden bg-black">
-          <HeroEmbed videoSrc={content.hero.videoSrc} placeholderImage="/nikoo/hero-placeholder.png">
+          <HeroEmbed videoSrc={content.hero.videoSrc} placeholderImage={content.hero.placeholderImage}>
             <Header
               title={Nikoo.title}
               emailLink={content.hero.emailLink}

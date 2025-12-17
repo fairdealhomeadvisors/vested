@@ -23,11 +23,11 @@ export default function HeroEmbed({
         <Image
           src={placeholderImage}
           alt="Hero background"
-          fill
           priority
           fetchPriority="high"
-          className="object-cover"
-          sizes="100vw"
+          className="object-cover w-full h-full"
+          width={1900}
+          height={800}
         />
       </div>
 
