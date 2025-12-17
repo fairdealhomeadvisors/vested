@@ -5,6 +5,7 @@ export default {
 
   hero: {
     videoSrc: "/nikoo/hero.webm",
+    placeholderImage: "/nikoo/hero-placeholder.webp",
     whatsappUrl: "https://wa.me/919633441261",
     emailLink: "mailto:info@nikoohomes.com",
     phoneNumber: "+91 636 624 1261",
