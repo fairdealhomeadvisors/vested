@@ -28,6 +28,7 @@ export default function HeroEmbed({
           className="object-cover w-full h-full"
           width={1900}
           height={800}
+          preload={true}
         />
       </div>
 
