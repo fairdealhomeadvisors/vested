@@ -16,9 +16,6 @@ interface HeaderProps {
 export default function Header(props: HeaderProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
       className="p-5 flex items-start justify-between flex-wrap"
     >
       <div className="text-white">

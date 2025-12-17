@@ -21,7 +21,7 @@ export default function Page() {
       <InquiryModalAutoTrigger delay={7000} />
       <FloatingCTA />
       <section className="max-w-[1400px] mx-auto">
-        <div className="md:m-10 md:rounded-2xl overflow-hidden">
+        <div className="md:m-10 md:rounded-2xl overflow-hidden bg-black">
           <HeroEmbed videoSrc={content.hero.videoSrc} placeholderImage="/nikoo/hero-placeholder.png">
             <Header
               title={Nikoo.title}
