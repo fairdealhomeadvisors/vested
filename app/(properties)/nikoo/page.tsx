@@ -21,15 +21,15 @@ export default function Page() {
       <InquiryModalAutoTrigger delay={7000} />
       <FloatingCTA />
       <section className="max-w-[1400px] mx-auto">
-        <div className="md:m-10 rounded-2xl overflow-hidden">
-          <HeroEmbed youtubeUrl={content.hero.videoUrl} placeholderImage="/nikoo/hero-placeholder.png">
+        <div className="md:m-10 md:rounded-2xl overflow-hidden">
+          <HeroEmbed videoSrc={content.hero.videoSrc} placeholderImage="/nikoo/hero-placeholder.png">
             <Header
               title={Nikoo.title}
               emailLink={content.hero.emailLink}
               whatsappLink={content.hero.whatsappUrl}
               phoneNumber={content.hero.phoneNumber}
             />
-            <div className="md:mt-20">
+            <div className="my-10 md:my-0 md:mt-20">
               <HeroText
                 heading={content.hero.heading}
                 subheading={content.hero.subheading}

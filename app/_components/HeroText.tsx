@@ -20,14 +20,14 @@ export default function HeroText(props: HeroTextProps) {
       <motion.h1
         {...fadeUp}
         transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-        className="font-normal text-4xl mb-3 max-w-xl md:text-white"
+        className="font-normal text-4xl mb-3 max-w-xl text-white"
       >
         {props.heading}
       </motion.h1>
       <motion.p
         {...fadeUp}
         transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-        className="text-xl font-light mb-4 max-w-lg md:text-white"
+        className="text-xl font-light mb-4 max-w-lg text-white"
       >
         {props.subheading}
       </motion.p>
@@ -46,10 +46,10 @@ export default function HeroText(props: HeroTextProps) {
           step="contact"
           variant="outline"
           size="lg"
-          className="group bg-black text-white md:bg-white md:text-black rounded-full mt-4 text-base pr-1 cursor-pointer hover:bg-black hover:text-white transition-colors duration-200"
+          className="group bg-white text-black rounded-full mt-4 text-base pr-1 cursor-pointer hover:bg-black hover:text-white transition-colors duration-200"
         >
           Book Site visit{" "}
-          <span className="bg-white text-black md:bg-black md:text-white rounded-full ml-2 p-2 group-hover:bg-white group-hover:text-black transition-colors duration-200">
+          <span className=" bg-black text-white rounded-full ml-2 p-2 group-hover:bg-white group-hover:text-black transition-colors duration-200">
             <ArrowUpRightIcon />
           </span>
         </InquiryModalTrigger>

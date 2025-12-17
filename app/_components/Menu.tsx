@@ -50,7 +50,7 @@ export default function Menu( props: MenuProps ) {
 
   return (
     <div className="md:hidden">
-      <Bars2Icon className="w-6 h-6" onClick={handleMenuOpen} />
+      <Bars2Icon className="w-6 h-6 text-white" onClick={handleMenuOpen} />
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div

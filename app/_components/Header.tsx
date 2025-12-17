@@ -21,7 +21,7 @@ export default function Header(props: HeaderProps) {
       transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
       className="p-5 flex items-start justify-between flex-wrap"
     >
-      <div className="md:text-white">
+      <div className="text-white">
         <span className="font-semibold mr-1">{props.title?.split(" ")[0]}</span>
         <span>{props.title?.split(" ")?.slice(1).join(" ")}</span>
       </div>
@@ -58,7 +58,7 @@ export default function Header(props: HeaderProps) {
           FAQ
         </Link>
       </div>
-      <div className="flex items-center gap-5">
+      <div className=" items-center gap-5 hidden md:flex">
         <Link href={props.emailLink} className="cursor-pointer" aria-label="Email">
           <EnvelopeIcon className="w-6 h-6 text-white" />
         </Link>
