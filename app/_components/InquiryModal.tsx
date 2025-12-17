@@ -327,7 +327,7 @@ export default function InquiryModal() {
                 <Button
                   type="button"
                   onClick={handleNext}
-                  className="gap-1 sm:gap-2 text-base sm:text-xl bg-green-600 hover:bg-green-900 text-white"
+                  className="gap-1 sm:gap-2 text-base sm:text-xl bg-green-800 hover:bg-green-900 text-white"
                 >
                   Continue
                   <ArrowRightIcon className="w-3 h-3 sm:w-4 sm:h-4" />
