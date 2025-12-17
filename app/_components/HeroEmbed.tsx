@@ -4,14 +4,14 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 interface HeroEmbedProps {
-  youtubeUrl: string;
+  videoSrc: string;
   placeholderImage: string;
   minHeight?: string;
   children?: React.ReactNode;
 }
 
 export default function HeroEmbed({
-  youtubeUrl,
+  videoSrc,
   placeholderImage,
   minHeight = "80vh",
   children,
@@ -19,15 +19,7 @@ export default function HeroEmbed({
   const [isVisible, setIsVisible] = useState(false);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-
-  let videoId: string = "";
-  try {
-    const url = new URL(youtubeUrl);
-    videoId = url.searchParams.get("v") || "";
-  } catch (e) {
-    videoId = "";
-    console.error(e);
-  }
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   // Load video when section comes into view
   useEffect(() => {
@@ -47,6 +39,15 @@ export default function HeroEmbed({
 
     return () => observer.disconnect();
   }, []);
+
+  // Play video when it becomes visible
+  useEffect(() => {
+    if (isVisible && videoRef.current) {
+      videoRef.current.play().catch(() => {
+        // Autoplay might be blocked, that's okay
+      });
+    }
+  }, [isVisible]);
 
   return (
     <div
@@ -71,18 +72,21 @@ export default function HeroEmbed({
       </div>
 
       {/* Background Video - lazy loaded when in view */}
-      {videoId && isVisible && (
-        <iframe
-          className="rounded-2xl top-1/2 left-1/2 min-h-52 md:absolute m-10 md:rounded-none md:m-0 md:w-[177vw] md:h-screen md:-translate-x-1/2 md:-translate-y-1/2"
-          src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${videoId}&rel=0`}
-          title="Background Video"
-          allow="autoplay; fullscreen"
-          onLoad={() => setIsVideoLoaded(true)}
+      {isVisible && (
+        <video
+          ref={videoRef}
+          className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover"
+          src={videoSrc}
+          muted
+          loop
+          playsInline
+          preload="none"
+          onLoadedData={() => setIsVideoLoaded(true)}
         />
       )}
 
       {/* Overlay */}
-      <div className="md:absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/40" />
 
       {/* Content */}
       <div className="relative z-10 p-4">{children}</div>

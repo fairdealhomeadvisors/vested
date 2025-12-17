@@ -300,7 +300,7 @@ export default function InquiryModal() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="contactMode" className="text-sm font-medium">Preferred mode of contact:</Label>
+                <Label className="text-sm font-medium">Preferred mode of contact:</Label>
                 <div className="flex gap-2 flex-wrap">
                 <button type="button" onClick={() => updateFormData({ contactMode: "whatsapp" })} className={cn("bg-green-400 w-min text-black px-4 py-2 rounded-lg", formData.contactMode === "whatsapp" ? "outline-2 outline-amber-50 outline-offset-2 outline-dashed" : "")}>Whatsapp</button>
                 <button type="button" onClick={() => updateFormData({ contactMode: "phone" })} className={cn("bg-white w-min text-black px-4 py-2 rounded-lg", formData.contactMode === "phone" ? "outline-2 outline-amber-50 outline-offset-2 outline-dashed" : "")}>Phone</button>

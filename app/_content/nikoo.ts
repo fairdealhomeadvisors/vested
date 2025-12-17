@@ -4,7 +4,7 @@ export default {
   title: "Nikoo Homes",
 
   hero: {
-    videoUrl: "https://www.youtube.com/watch?v=-Zi1F9-Uqn8",
+    videoSrc: "/nikoo/hero.webm",
     whatsappUrl: "https://wa.me/919633441261",
     emailLink: "mailto:info@nikoohomes.com",
     phoneNumber: "+91 636 624 1261",
