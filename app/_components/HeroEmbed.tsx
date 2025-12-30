@@ -23,8 +23,6 @@ export default function HeroEmbed({
         <Image
           src={placeholderImage}
           alt="Hero background"
-          priority
-          fetchPriority="high"
           className="object-cover w-full h-full"
           width={1900}
           height={800}

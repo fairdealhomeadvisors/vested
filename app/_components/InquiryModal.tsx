@@ -39,6 +39,7 @@ export default function InquiryModal() {
     isOpen,
     currentStep,
     formData,
+    modalTitle,
     closeModal,
     setStep,
     updateFormData,
@@ -131,7 +132,7 @@ export default function InquiryModal() {
         <div className="bg-linear-to-br from-zinc-900 via-zinc-800 to-zinc-900 px-4 sm:px-6 pt-5 sm:pt-6 pb-6 sm:pb-8">
           <DialogHeader className="text-white">
             <DialogTitle className="text-xl sm:text-2xl font-semibold tracking-tight">
-              Find Your Dream Home
+              {modalTitle}
             </DialogTitle>
             <DialogDescription className="text-zinc-400 mt-1 text-sm">
               Tell us what you&apos;re looking for

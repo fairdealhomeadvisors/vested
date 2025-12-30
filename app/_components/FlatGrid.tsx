@@ -17,7 +17,7 @@ export default function FlatGrid(props: FlatGridProps) {
     >
       {props.flats.map((flat, index) => (
         <StaggerItem key={index}>
-          <FlatCard flat={flat} />
+          <FlatCard flat={flat} index={index} />
         </StaggerItem>
       ))}
     </StaggerChildren>

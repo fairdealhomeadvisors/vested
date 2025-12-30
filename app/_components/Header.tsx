@@ -18,7 +18,7 @@ export default function Header(props: HeaderProps) {
     <motion.div
       className="p-5 flex items-start justify-between flex-wrap"
     >
-      <div className="text-white">
+      <div className="text-white text-2xl">
         <span className="font-semibold mr-1">{props.title?.split(" ")[0]}</span>
         <span>{props.title?.split(" ")?.slice(1).join(" ")}</span>
       </div>

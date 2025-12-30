@@ -16,7 +16,8 @@ interface InquiryModalContextType {
   isOpen: boolean;
   currentStep: InquiryStep;
   formData: InquiryFormData;
-  openModal: (step?: InquiryStep) => void;
+  modalTitle: string;
+  openModal: (step?: InquiryStep, title?: string) => void;
   closeModal: () => void;
   setStep: (step: InquiryStep) => void;
   updateFormData: (data: Partial<InquiryFormData>) => void;
@@ -31,6 +32,8 @@ const initialFormData: InquiryFormData = {
   budget: "",
 };
 
+const defaultModalTitle = "Find Your Dream Home";
+
 const InquiryModalContext = createContext<InquiryModalContextType | undefined>(
   undefined
 );
@@ -43,9 +46,11 @@ export function InquiryModalProvider({
   const [isOpen, setIsOpen] = useState(false);
   const [currentStep, setCurrentStep] = useState<InquiryStep>("preference");
   const [formData, setFormData] = useState<InquiryFormData>(initialFormData);
+  const [modalTitle, setModalTitle] = useState(defaultModalTitle);
 
-  const openModal = useCallback((step: InquiryStep = "preference") => {
+  const openModal = useCallback((step: InquiryStep = "preference", title?: string) => {
     setCurrentStep(step);
+    setModalTitle(title || defaultModalTitle);
     setIsOpen(true);
   }, []);
 
@@ -64,6 +69,7 @@ export function InquiryModalProvider({
   const resetForm = useCallback(() => {
     setFormData(initialFormData);
     setCurrentStep("preference");
+    setModalTitle(defaultModalTitle);
   }, []);
 
   return (
@@ -72,6 +78,7 @@ export function InquiryModalProvider({
         isOpen,
         currentStep,
         formData,
+        modalTitle,
         openModal,
         closeModal,
         setStep,
