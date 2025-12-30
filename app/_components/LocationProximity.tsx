@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "motion/react";
 import {
   Plane,
   Train,
@@ -50,13 +47,7 @@ export default function LocationProximity({ items }: LocationProximityProps) {
 
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-          className="flex items-center gap-4 mb-12"
-        >
+        <div className="flex items-center gap-4 mb-12">
           <div className="p-3 bg-red-500/10 rounded-xl border border-red-500/20">
             <MapPin className="w-6 h-6 text-red-400" />
           </div>
@@ -66,41 +57,14 @@ export default function LocationProximity({ items }: LocationProximityProps) {
             </h2>
             <p className="text-slate-400 text-sm mt-1">Strategic location with excellent connectivity</p>
           </div>
-        </motion.div>
+        </div>
 
         {/* Proximity Grid */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          variants={{
-            hidden: {},
-            visible: {
-              transition: {
-                staggerChildren: 0.06,
-              },
-            },
-          }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {items.map((item, index) => {
             const IconComponent = iconMap[item.icon] || MapPin;
             return (
-              <motion.div
-                key={index}
-                variants={{
-                  hidden: { opacity: 0, x: -20 },
-                  visible: {
-                    opacity: 1,
-                    x: 0,
-                    transition: {
-                      duration: 0.5,
-                      ease: [0.25, 0.1, 0.25, 1],
-                    },
-                  },
-                }}
-                className="group"
-              >
+              <div key={index} className="group">
                 <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:bg-white/10 hover:border-red-500/30 transition-all duration-300">
                   <div className="flex items-start gap-4">
                     {/* Icon */}
@@ -122,10 +86,10 @@ export default function LocationProximity({ items }: LocationProximityProps) {
                   {/* Hover accent line */}
                   <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-red-500 to-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-b-xl" />
                 </div>
-              </motion.div>
+              </div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </div>
   );

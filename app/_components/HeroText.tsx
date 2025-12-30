@@ -48,7 +48,7 @@ export default function HeroText(props: HeroTextProps) {
           size="lg"
           className="group bg-white text-black rounded-full mt-4 text-base pr-1 cursor-pointer hover:bg-black hover:text-white transition-colors duration-200"
         >
-          Book Site visit{" "}
+          Book Free Site Visit{" "}
           <span className=" bg-black text-white rounded-full ml-2 p-2 group-hover:bg-white group-hover:text-black transition-colors duration-200">
             <ArrowUpRightIcon />
           </span>

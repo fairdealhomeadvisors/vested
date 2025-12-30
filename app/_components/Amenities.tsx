@@ -21,12 +21,12 @@ export default function Amenities(props: AmenitiesProps) {
         <StaggerChildren staggerDelay={0.1}>
           {props.items.map((item, index) => (
             <StaggerItem key={index}>
-              <div className="grid grid-cols-3 gap-5 md:gap-20 border-t border-gray-400 py-5">
+              <div className="grid grid-cols-[1fr_2fr_2fr] gap-5 md:gap-10 border-t border-gray-400 py-5">
                 <span className="text-2xl text-red-600">0{index + 1}</span>
                 <h4 className="uppercase max-w-3xs col-span-2 md:col-span-1">
                   {item.title}
                 </h4>
-                <p className="text-gray-500 text-xs md:max-w-2xs col-span-3 md:col-span-1">
+                <p className="text-gray-500 text-sm md:max-w-2xs col-span-3 md:col-span-1">
                   {item.description}
                 </p>
               </div>

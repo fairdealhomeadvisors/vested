@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import { EnvelopeIcon, PhoneIcon, InformationCircleIcon } from "@heroicons/react/24/outline";
 import { InquiryModalTrigger } from "./InquiryModalTrigger";
 
 export default function Footer() {
@@ -180,24 +180,24 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <PhoneIcon className="w-5 h-5 text-zinc-400 mt-0.5 shrink-0" />
                 <div>
-                  <p className="text-zinc-300">+91 987 654 3210</p>
+                  <p className="text-zinc-300">+91 636 624 1261</p>
                   <p className="text-zinc-500 text-sm">Mon-Sun, 9am-11pm</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <EnvelopeIcon className="w-5 h-5 text-zinc-400 mt-0.5 shrink-0" />
                 <a
-                  href="mailto:info@nikoohomes.com"
+                  href="mailto:fairdeal.Jyoti@gmail.com"
                   className="text-zinc-300 hover:text-white transition-colors duration-200"
                 >
-                  info@nikoohomes.com
+                  fairdeal.Jyoti@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <MapPinIcon className="w-5 h-5 text-zinc-400 mt-0.5 shrink-0" />
+                <InformationCircleIcon className="w-5 h-5 text-zinc-400 mt-0.5 shrink-0" />
                 <p className="text-zinc-300">
-                  123 Real Estate Avenue,<br />
-                  Bangalore, Karnataka 560001
+                  Company RERA - <br />
+                  PRM/KA/RERA/1251/310/AG/251216/006620
                 </p>
               </li>
             </ul>

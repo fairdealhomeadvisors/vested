@@ -1,13 +1,11 @@
-import { title } from "process";
-
 export default {
   title: "Nikoo Homes",
 
   hero: {
     videoSrc: "/nikoo/hero.webm",
     placeholderImage: "/nikoo/hero-placeholder.webp",
-    whatsappUrl: "https://wa.me/919633441261",
-    emailLink: "mailto:info@nikoohomes.com",
+    whatsappUrl: "https://wa.me/+916366241261",
+    emailLink: "mailto:fairdeal.Jyoti@gmail.com",
     phoneNumber: "+91 636 624 1261",
     heading: "North Bengaluru’s Most Promising Residential Investment",
     subheading: "Premium homes in a well-connected location with exceptional long-term value."

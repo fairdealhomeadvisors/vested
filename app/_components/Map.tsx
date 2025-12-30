@@ -8,12 +8,12 @@ interface MapProps {
 }
 export default function Map(props: MapProps) {
   return (
-    <div className="relative py-16 md:py-24 overflow-hidden bg-linear-to-b from-white via-gray-50 to-white">
+    <div className="relative py-16 md:pb-24 overflow-hidden bg-linear-to-b from-white via-gray-50 to-white">
 
       {/* Title Section */}
-      <div className="relative z-10 text-center mb-2 md:mb-16 px-6">
+      <div className="relative z-10 text-center mb-2 px-6">
         <h2 className="text-4xl font-light tracking-tight leading-tight">
-          <span className="block">Find your way home</span>
+          <span className="block">Find your way</span>
           <span className="block font-helvetica text-red-600">HOME.</span>
         </h2>
         <div className="w-24 h-1 bg-red-600 mx-auto mt-8 rounded-full" />

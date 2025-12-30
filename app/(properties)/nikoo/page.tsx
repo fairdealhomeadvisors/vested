@@ -67,33 +67,27 @@ export default function Page() {
         </div>
       </section>
       <section id="map">
-        <AnimateOnScroll animation="fade-up">
-          <Map
-            mapEmbedUrl={content.map.mapEmbedUrl}
-            location={content.map.location}
-            directionsUrl={content.map.directionsUrl}
-            mapImage={content.map.mapImage}
-          />
-        </AnimateOnScroll>
+        <Map
+          mapEmbedUrl={content.map.mapEmbedUrl}
+          location={content.map.location}
+          directionsUrl={content.map.directionsUrl}
+          mapImage={content.map.mapImage}
+        />
       </section>
       <section>
         <LocationProximity items={content.proximity} />
       </section>
       <section id="layouts" className="bg-black min-h-screen pb-20">
-        <AnimateOnScroll animation="fade-up">
-          <h2 className="text-white text-2xl font-light text-center py-20">
-            What you get:{" "}
-            <strong className="font-helvetica">Apartments & Layouts</strong>
-          </h2>
-        </AnimateOnScroll>
+        <h2 className="text-white text-2xl font-light text-center py-20">
+          What you get:{" "}
+          <strong className="font-helvetica">Apartments & Layouts</strong>
+        </h2>
         <FlatGrid flats={content.flats} />
       </section>
       <section id="FAQ" className="max-w-[1400px] mx-auto">
         <Faq faq={content.FAQ} />
       </section>
-      <AnimateOnScroll animation="fade-up">
-        <Footer />
-      </AnimateOnScroll>
+      <Footer />
     </main>
   );
 }
