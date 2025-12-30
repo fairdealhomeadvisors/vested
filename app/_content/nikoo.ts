@@ -47,11 +47,21 @@ export default {
   },
 
   map: {
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8199.237025638375!2d77.6404670913306!3d13.090345384004603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae198d5bc92961%3A0xb25bd5cd68eeefc2!2sBhartiya%20City%20Nikoo%20Homes!5e0!3m2!1sen!2sin!4v1765809122155!5m2!1sen!2sin",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7768.8667105438535!2d77.6383008!3d13.1980873!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1f68df65aa35%3A0xfec4b96bea9186de!2sBhartiya%20City%20-%20New%20Launch%20Navarathna%20Agrahara!5e0!3m2!1sen!2sin!4v1766401484530!5m2!1sen!2sin",
     location: "Devanahalli, Bangalore",
-    directionsUrl: "https://maps.app.goo.gl/3f4Ui57cBypfHwns6",
+    directionsUrl: "https://maps.app.goo.gl/RgfhWLj86odqzjej6",
     mapImage: "/nikoo/map.jpg",
   },
+
+  proximity: [
+    { name: "Kempegowda International Airport", distance: "5 mins", icon: "Plane" },
+    { name: "Upcoming Metro Station", distance: "Nearby", icon: "Train" },
+    { name: "Manyata Tech Park", distance: "10 mins", icon: "Building2" },
+    { name: "Sri Chaitanya School", distance: "5 mins", icon: "GraduationCap" },
+    { name: "KIADB Tech Park", distance: "15.6 km", icon: "Landmark" },
+    { name: "Columbia Asia Hospital", distance: "10 mins", icon: "Hospital" },
+    { name: "North Gate Mall", distance: "15 mins", icon: "ShoppingBag" },
+  ],
 
   flats: [
     {
@@ -101,6 +111,49 @@ export default {
     }
   ],
 
+  amenitiesList: [
+    {
+      title: "Mini Theatre",
+      icon: "Film"
+    },
+    {
+      title: "Clubhouse",
+      icon: "Home"
+    },
+    {
+      title: "Meditation Pod",
+      icon: "Leaf"
+    },
+    {
+      title: "Swimming Pool",
+      icon: "Waves"
+    },
+    {
+      title: "Gymnasium",
+      icon: "Dumbbell"
+    },
+    {
+      title: "Amphitheatre",
+      icon: "Theater"
+    },
+    {
+      title: "Kids' Play Area",
+      icon: "Baby"
+    },
+    {
+      title: "Cafeteria",
+      icon: "Coffee"
+    },
+    {
+      title: "Skating Rink",
+      icon: "CircleDot"
+    },
+    {
+      title: "Step Garden",
+      icon: "TreePine"
+    }
+  ],
+
   FAQ: [
     {
       "question": "What types of homes are available in Bhartiya City Garden Estate?",
@@ -121,22 +174,6 @@ export default {
     {
       "question": "Is Bhartiya City Garden Estate RERA approved?",
       "answer": "Yes, Bhartiya City Garden Estate is RERA approved, ensuring legal compliance, transparency, and buyer protection."
-    },
-    {
-      "question": "What makes Nikoo Homes different from other developers?",
-      "answer": "Nikoo Homes by Bhartiya Group is known for international design standards, high-quality construction, integrated township living, and a strong track record of timely delivery."
-    },
-    {
-      "question": "Who should consider buying a home in Bhartiya City Garden Estate?",
-      "answer": "The project is ideal for IT professionals, families seeking a secure and green lifestyle, NRIs looking for long-term investment, and buyers upgrading to premium living."
-    },
-    {
-      "question": "Can I schedule a site visit to Bhartiya City Garden Estate?",
-      "answer": "Yes, you can book an assisted site visit with a complete walkthrough of the project by filling out the inquiry form or contacting our sales team."
-    },
-    {
-      "question": "How can I get more details about floor plans, pricing, and availability?",
-      "answer": "Fill out the lead form or contact us directly to receive the latest brochures, floor plans, price details, payment options, and availability status."
     }
   ]
 };

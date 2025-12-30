@@ -39,10 +39,12 @@ export default function InquiryModal() {
     isOpen,
     currentStep,
     formData,
+    modalTitle,
     closeModal,
     setStep,
     updateFormData,
     resetForm,
+    triggerSuccess,
   } = useInquiryModal();
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -103,12 +105,13 @@ export default function InquiryModal() {
       setIsSubmitting(false);
       setShowSuccess(true);
       
-      // Show success message for 2 seconds then close
+      // Show success message briefly, then trigger callback and close
       setTimeout(() => {
         setShowSuccess(false);
+        triggerSuccess();
         resetForm();
         closeModal();
-      }, 2000);
+      }, 1500);
     } catch (error) {
       console.error("Form submission error:", error);
       setIsSubmitting(false);
@@ -131,7 +134,7 @@ export default function InquiryModal() {
         <div className="bg-linear-to-br from-zinc-900 via-zinc-800 to-zinc-900 px-4 sm:px-6 pt-5 sm:pt-6 pb-6 sm:pb-8">
           <DialogHeader className="text-white">
             <DialogTitle className="text-xl sm:text-2xl font-semibold tracking-tight">
-              Find Your Dream Home
+              {modalTitle}
             </DialogTitle>
             <DialogDescription className="text-zinc-400 mt-1 text-sm">
               Tell us what you&apos;re looking for
