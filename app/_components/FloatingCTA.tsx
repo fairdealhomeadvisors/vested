@@ -42,7 +42,7 @@ export default function FloatingCTA({ heroRef }: FloatingCTAProps) {
           className="fixed text-2xl bottom-10 right-10 z-50 flex items-center gap-2 bg-red-600 text-white px-5 py-3 rounded-full shadow-lg shadow-red-600/30 hover:bg-red-700 hover:shadow-xl hover:shadow-red-600/40 transition-all duration-300 cursor-pointer group"
         >
           <CalendarIcon className="w-5 h-5" />
-          <span className="font-medium">Book Site Visit</span>
+          <span className="font-medium">Book Free Site Visit</span>
         </motion.button>
       )}
     </AnimatePresence>
