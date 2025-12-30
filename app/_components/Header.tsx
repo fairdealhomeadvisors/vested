@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { motion } from "motion/react";
 import Menu from "./Menu";
 import { InquiryModalTrigger } from "./InquiryModalTrigger";
 
@@ -15,9 +12,7 @@ interface HeaderProps {
 
 export default function Header(props: HeaderProps) {
   return (
-    <motion.div
-      className="p-5 flex items-start justify-between flex-wrap"
-    >
+    <div className="p-5 flex items-start justify-between flex-wrap">
       <div className="text-white text-2xl">
         <span className="font-semibold mr-1">{props.title?.split(" ")[0]}</span>
         <span>{props.title?.split(" ")?.slice(1).join(" ")}</span>
@@ -82,6 +77,6 @@ export default function Header(props: HeaderProps) {
       </div>
       {/* HAMBURGER MENU FOR MOBILE */}
       <Menu emailLink={props.emailLink} whatsappLink={props.whatsappLink} phoneNumber={props.phoneNumber} />
-    </motion.div>
+    </div>
   );
 }
