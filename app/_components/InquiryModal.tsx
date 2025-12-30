@@ -44,6 +44,7 @@ export default function InquiryModal() {
     setStep,
     updateFormData,
     resetForm,
+    triggerSuccess,
   } = useInquiryModal();
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -104,12 +105,13 @@ export default function InquiryModal() {
       setIsSubmitting(false);
       setShowSuccess(true);
       
-      // Show success message for 2 seconds then close
+      // Show success message briefly, then trigger callback and close
       setTimeout(() => {
         setShowSuccess(false);
+        triggerSuccess();
         resetForm();
         closeModal();
-      }, 2000);
+      }, 1500);
     } catch (error) {
       console.error("Form submission error:", error);
       setIsSubmitting(false);

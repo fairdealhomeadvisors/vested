@@ -121,22 +121,6 @@ export default {
     {
       "question": "Is Bhartiya City Garden Estate RERA approved?",
       "answer": "Yes, Bhartiya City Garden Estate is RERA approved, ensuring legal compliance, transparency, and buyer protection."
-    },
-    {
-      "question": "What makes Nikoo Homes different from other developers?",
-      "answer": "Nikoo Homes by Bhartiya Group is known for international design standards, high-quality construction, integrated township living, and a strong track record of timely delivery."
-    },
-    {
-      "question": "Who should consider buying a home in Bhartiya City Garden Estate?",
-      "answer": "The project is ideal for IT professionals, families seeking a secure and green lifestyle, NRIs looking for long-term investment, and buyers upgrading to premium living."
-    },
-    {
-      "question": "Can I schedule a site visit to Bhartiya City Garden Estate?",
-      "answer": "Yes, you can book an assisted site visit with a complete walkthrough of the project by filling out the inquiry form or contacting our sales team."
-    },
-    {
-      "question": "How can I get more details about floor plans, pricing, and availability?",
-      "answer": "Fill out the lead form or contact us directly to receive the latest brochures, floor plans, price details, payment options, and availability status."
     }
   ]
 };

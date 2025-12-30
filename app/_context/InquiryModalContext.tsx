@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState, useCallback } from "react";
+import React, { createContext, useContext, useState, useCallback, useRef } from "react";
 
 export type InquiryStep = "preference" | "budget" | "contact";
 
@@ -17,11 +17,12 @@ interface InquiryModalContextType {
   currentStep: InquiryStep;
   formData: InquiryFormData;
   modalTitle: string;
-  openModal: (step?: InquiryStep, title?: string) => void;
+  openModal: (step?: InquiryStep, title?: string, onSuccess?: () => void) => void;
   closeModal: () => void;
   setStep: (step: InquiryStep) => void;
   updateFormData: (data: Partial<InquiryFormData>) => void;
   resetForm: () => void;
+  triggerSuccess: () => void;
 }
 
 const initialFormData: InquiryFormData = {
@@ -47,10 +48,12 @@ export function InquiryModalProvider({
   const [currentStep, setCurrentStep] = useState<InquiryStep>("preference");
   const [formData, setFormData] = useState<InquiryFormData>(initialFormData);
   const [modalTitle, setModalTitle] = useState(defaultModalTitle);
+  const onSuccessCallback = useRef<(() => void) | null>(null);
 
-  const openModal = useCallback((step: InquiryStep = "preference", title?: string) => {
+  const openModal = useCallback((step: InquiryStep = "preference", title?: string, onSuccess?: () => void) => {
     setCurrentStep(step);
     setModalTitle(title || defaultModalTitle);
+    onSuccessCallback.current = onSuccess || null;
     setIsOpen(true);
   }, []);
 
@@ -70,6 +73,13 @@ export function InquiryModalProvider({
     setFormData(initialFormData);
     setCurrentStep("preference");
     setModalTitle(defaultModalTitle);
+    onSuccessCallback.current = null;
+  }, []);
+
+  const triggerSuccess = useCallback(() => {
+    if (onSuccessCallback.current) {
+      onSuccessCallback.current();
+    }
   }, []);
 
   return (
@@ -84,6 +94,7 @@ export function InquiryModalProvider({
         setStep,
         updateFormData,
         resetForm,
+        triggerSuccess,
       }}
     >
       {children}
