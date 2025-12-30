@@ -6,8 +6,10 @@ import HeroText from "@/app/_components/HeroText";
 import HeroEmbed from "@/app/_components/HeroEmbed";
 import TextCallout from "@/app/_components/TextCallout";
 import Amenities from "@/app/_components/Amenities";
+import AmenitiesList from "@/app/_components/AmenitiesList";
 import Marquee from "@/app/_components/Marquee";
 import Map from "@/app/_components/Map";
+import LocationProximity from "@/app/_components/LocationProximity";
 import FlatGrid from "@/app/_components/FlatGrid";
 import Faq from "@/app/_components/Faq";
 import Footer from "@/app/_components/Footer";
@@ -53,6 +55,9 @@ export default function Page() {
           items={content.amenities.items}
         />
       </section>
+      <section className="bg-linear-to-b from-white via-gray-50/50 to-white">
+        <AmenitiesList items={content.amenitiesList} />
+      </section>
       <section>
         <div className="mt-10 md:mt-20">
           <Marquee
@@ -70,6 +75,9 @@ export default function Page() {
             mapImage={content.map.mapImage}
           />
         </AnimateOnScroll>
+      </section>
+      <section>
+        <LocationProximity items={content.proximity} />
       </section>
       <section id="layouts" className="bg-black min-h-screen pb-20">
         <AnimateOnScroll animation="fade-up">
