@@ -5,8 +5,8 @@
 
 export const domainMappings = {
   nikoo: {
-    domain: "nikoogardenestates.co.in",
-    url: "https://nikoogardenestates.co.in",
+    domain: "www.nikoogardenestates.co.in",
+    url: "https://www.nikoogardenestates.co.in",
   },
   // Add more properties here as needed
   // example: {
