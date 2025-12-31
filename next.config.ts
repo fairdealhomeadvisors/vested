@@ -19,7 +19,9 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
 
   async rewrites() {
-    return domainRewrites;
+    return {
+      beforeFiles: domainRewrites,
+    };
   },
 };
 
