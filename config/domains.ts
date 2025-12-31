@@ -5,11 +5,13 @@
 
 export const domainMappings = {
   nikoo: {
+    path: "/nikoo",
     domain: "www.nikoogardenestates.co.in",
     url: "https://www.nikoogardenestates.co.in",
   },
   // Add more properties here as needed
   // example: {
+  //   path: "/example",
   //   domain: "example.com",
   //   url: "https://example.com",
   // },
