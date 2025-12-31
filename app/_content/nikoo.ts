@@ -5,7 +5,7 @@ export default {
     videoSrc: "/nikoo/hero.webm",
     placeholderImage: "/nikoo/hero-placeholder.webp",
     whatsappUrl: "https://wa.me/+916366241261",
-    emailLink: "mailto:fairdeal.Jyoti@gmail.com",
+    emailLink: "mailto:Fairdealoffice.email@gmail.com",
     phoneNumber: "+91 636 624 1261",
     heading: "North Bengaluru’s Most Promising Residential Investment",
     subheading: "Premium homes in a well-connected location with exceptional long-term value."

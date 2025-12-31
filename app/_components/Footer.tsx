@@ -187,10 +187,10 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <EnvelopeIcon className="w-5 h-5 text-zinc-400 mt-0.5 shrink-0" />
                 <a
-                  href="mailto:fairdeal.Jyoti@gmail.com"
+                  href="mailto:Fairdealoffice.email@gmail.com"
                   className="text-zinc-300 hover:text-white transition-colors duration-200"
                 >
-                  fairdeal.Jyoti@gmail.com
+                  Fairdealoffice.email@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">

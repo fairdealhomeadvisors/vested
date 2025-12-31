@@ -1,4 +1,5 @@
 import content from "@/app/_content/nikoo";
+import { domainMappings } from "@/config/domains";
 
 import Header from "@/app/_components/Header";
 import Nikoo from "@/app/_content/nikoo";
@@ -16,6 +17,12 @@ import Footer from "@/app/_components/Footer";
 import InquiryModalAutoTrigger from "@/app/_components/InquiryModalAutoTrigger";
 import AnimateOnScroll from "@/app/_components/AnimateOnScroll";
 import FloatingCTA from "@/app/_components/FloatingCTA";
+
+export const metadata = {
+  alternates: {
+    canonical: domainMappings.nikoo.url,
+  },
+}
 
 export default function Page() {
   return (
