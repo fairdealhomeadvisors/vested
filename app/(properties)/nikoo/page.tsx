@@ -19,8 +19,22 @@ import AnimateOnScroll from "@/app/_components/AnimateOnScroll";
 import FloatingCTA from "@/app/_components/FloatingCTA";
 
 export const metadata = {
+  title: "Nikoo Garden Estate — Luxury Homes with World-Class Amenities",
+  description: "Discover luxury living at Nikoo Garden Estate — contemporary residences surrounded by greenery, world-class amenities, and a vibrant community lifestyle.",
   alternates: {
     canonical: domainMappings.nikoo.url,
+  },
+  openGraph: {
+    title: "Nikoo Garden Estate — Luxury Homes with World-Class Amenities",
+    description: "Discover luxury living at Nikoo Garden Estate — contemporary residences surrounded by greenery, world-class amenities, and a vibrant community lifestyle.",
+    url: domainMappings.nikoo.url,
+    siteName: "Nikoo Garden Estate",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nikoo Garden Estate — Luxury Homes with World-Class Amenities",
+    description: "Discover luxury living at Nikoo Garden Estate — contemporary residences surrounded by greenery, world-class amenities, and a vibrant community lifestyle.",
   },
 }
 

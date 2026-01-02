@@ -4,6 +4,8 @@ import localFont from "next/font/local";
 import { InquiryModalProvider } from "@/app/_context/InquiryModalContext";
 import InquiryModal from "@/app/_components/InquiryModal";
 
+import GTM from "@/app/_components/GTM";
+
 const clashDisplay = localFont({
   src: "_fonts/ClashDisplay-Variable.woff2",
 });
@@ -13,8 +15,8 @@ const Helvetica = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Vested",
-  description: "Project Template for Vested",
+  title: "Fair deals homes",
+  description: "The best way to buy a home in Bengaluru",
 };
 
 export default function RootLayout({
@@ -24,9 +26,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GTM />
       <body
         className={`${clashDisplay.className} ${Helvetica.className} antialiased`}
       >
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5JLNRGB5"
+            height="0"
+            width="0"
+            className="display:none;visibility:hidden"
+          ></iframe>
+        </noscript>
         <InquiryModalProvider>
           {children}
           <InquiryModal />
