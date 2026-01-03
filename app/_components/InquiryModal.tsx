@@ -27,6 +27,13 @@ import {
 import { cn } from "@/app/_lib/utils";
 import { handleForm } from "../_actions/handleForm";
 
+// Declare dataLayer for TypeScript
+declare global {
+  interface Window {
+    dataLayer: Record<string, unknown>[];
+  }
+}
+
 const steps: { id: InquiryStep; label: string; icon: React.ElementType }[] = [
   { id: "preference", label: "Preference", icon: HomeIcon },
   { id: "budget", label: "Budget", icon: CurrencyDollarIcon },
@@ -104,6 +111,18 @@ export default function InquiryModal() {
       
       setIsSubmitting(false);
       setShowSuccess(true);
+
+      // Push lead event to dataLayer for GTM
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+          event: 'lead_submitted',
+          lead_data: {
+            purpose: formData.purpose,
+            budget: formData.budget,
+            contact_mode: formData.contactMode,
+          }
+        });
+      }
       
       // Show success message briefly, then trigger callback and close
       setTimeout(() => {
