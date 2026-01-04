@@ -22,152 +22,121 @@ export default function Disclaimer() {
             Back to Home
           </Link>
           <h1 className="text-4xl md:text-5xl font-semibold">Disclaimer</h1>
-          <p className="mt-4 text-zinc-400">Last updated: December 15, 2024</p>
+          <p className="mt-4 text-zinc-400">Last updated: January 4, 2026</p>
         </div>
       </div>
 
       {/* Content */}
-      <div className="max-w-4xl mx-auto px-6 py-12 md:py-16">
+      <div className="max-w-4xl mx-auto px-6 py-12 md:py-16 font-clash-display">
         <div className="prose prose-lg max-w-none prose-headings:font-semibold prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-p:text-zinc-600 prose-li:text-zinc-600">
           <p className="lead text-lg text-zinc-700">
-            Please read this disclaimer carefully before using our website or
-            making any property-related decisions based on information provided
-            herein.
+            This website is owned and managed by Jyoti Gupta, an authorized
+            channel partner for the Nikoo Garden Estate project.
+          </p>
+          <p className="text-lg text-zinc-700">
+            We do not represent or claim to be the official website of the
+            project developer.
           </p>
 
-          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">General Information</h2>
-          <p>
-            The information provided on the Fairdeal Home Advisors website is for
-            general informational purposes only. While we strive to keep the
-            information up to date and accurate, we make no representations or
-            warranties of any kind, express or implied, about the completeness,
-            accuracy, reliability, suitability, or availability of the
-            information, products, services, or related graphics contained on the
-            website.
-          </p>
-
-          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">Property Representations</h2>
-          <p>
-            All images, renderings, floor plans, and visual representations on
-            this website are artistic impressions and for illustration purposes
-            only. They may not accurately represent the final product due to:
-          </p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Ongoing design modifications and improvements</li>
-            <li>Variations in materials and finishes</li>
-            <li>Changes required by regulatory authorities</li>
-            <li>Natural variations in construction</li>
-            <li>Differences in lighting and photography</li>
-          </ul>
-          <p>
-            Prospective buyers are strongly advised to visit the actual site and
-            review approved plans before making any purchase decisions.
-          </p>
-
-          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">Pricing Information</h2>
-          <p>
-            All prices mentioned on this website are indicative and subject to
-            change without prior notice. Final pricing will depend on various
-            factors including but not limited to:
-          </p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Unit location and floor level</li>
-            <li>View and orientation</li>
-            <li>Market conditions at the time of booking</li>
-            <li>Applicable taxes and statutory charges</li>
-            <li>Additional preferences and customizations</li>
-          </ul>
-          <p>
-            The actual price payable may differ from the indicative prices shown.
-            Please contact our sales team for current pricing.
-          </p>
-
-          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">No Professional Advice</h2>
-          <p>
-            The content on this website does not constitute professional advice.
-            It should not be relied upon as a substitute for consultation with
-            qualified professionals including:
-          </p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Legal counsel for property transactions</li>
-            <li>Financial advisors for investment decisions</li>
-            <li>Tax consultants for tax implications</li>
-            <li>Property valuers for independent assessments</li>
-          </ul>
-
-          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">Third-Party Content</h2>
-          <p>
-            Our website may contain links to external websites or content from
-            third parties. We do not control and are not responsible for the
-            content, privacy policies, or practices of third-party websites. The
-            inclusion of any link does not imply endorsement by Fairdeal Home
-            Advisors.
-          </p>
-
-          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">RERA Information</h2>
-          <p>
-            All our projects are registered under the Real Estate (Regulation and
-            Development) Act, 2016. The RERA registration numbers are provided for
-            each project. Prospective buyers should:
-          </p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Verify project details on the official RERA website of the respective state</li>
-            <li>Review all approved documents before making any commitment</li>
-            <li>Understand their rights under RERA before signing any agreement</li>
-          </ul>
-
-          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">Limitation of Liability</h2>
-          <p>
-            Under no circumstances shall Fairdeal Home Advisors, its directors,
-            employees, partners, agents, suppliers, or affiliates be liable for
-            any indirect, incidental, special, consequential, or punitive damages,
-            including without limitation:
-          </p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Loss of profits or revenue</li>
-            <li>Loss of data or goodwill</li>
-            <li>Service interruption or computer damage</li>
-            <li>Any other intangible losses</li>
-          </ul>
-          <p>
-            This limitation applies whether the alleged liability is based on
-            contract, tort, negligence, strict liability, or any other basis, even
-            if we have been advised of the possibility of such damage.
-          </p>
-
-          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">Accuracy of Information</h2>
-          <p>
-            We endeavor to ensure that the information on our website is accurate
-            and up to date. However, errors may occur. If you notice any
-            inaccuracies, please bring them to our attention, and we will make
-            reasonable efforts to correct them promptly.
-          </p>
-
-          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">Changes to Disclaimer</h2>
-          <p>
-            We reserve the right to update or modify this disclaimer at any time
-            without prior notice. Your continued use of the website after any
-            changes signifies your acceptance of the modified disclaimer.
-          </p>
-
-          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">Governing Law</h2>
-          <p>
-            This disclaimer shall be governed by and construed in accordance with
-            the laws of India. Any disputes arising out of or in connection with
-            this disclaimer shall be subject to the exclusive jurisdiction of the
-            courts of Bangalore, Karnataka.
-          </p>
-
-          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">Contact Information</h2>
-          <p>
-            If you have any questions about this disclaimer, please contact us:
-          </p>
+          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">
+            Project & Regulatory Details
+          </h2>
           <ul className="list-none pl-0 space-y-2">
-            <li><strong>Email:</strong> Fairdealoffice.email@gmail.com</li>
-            <li><strong>Phone:</strong> +91 636 624 1261</li>
             <li>
-              <strong>Address:</strong> Flat No 5066, Tower 5, 6th Floor, Earls Court, ITPL Road,
-              Whitefield, Bengaluru, Karnataka 560048, India
+              <strong>Project Name:</strong> Nikoo Garden Estate
+            </li>
+            <li>
+              <strong>Project RERA No:</strong>{" "}
+              PRM/KA/RERA/1251/446/PR/200421/003456
+            </li>
+            <li>
+              <strong>Channel Partner RERA No:</strong>{" "}
+              PRM/KA/RERA/1251/310/AG/251216/006620
+            </li>
+          </ul>
+          <p>
+            All project details, images, floor plans, brochures, pricing, and
+            specifications displayed on this website are shared as provided by
+            the developer or their authorized representatives and are subject to
+            change.
+          </p>
+          <p>
+            Visitors are strongly advised to verify all project information
+            independently through:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>The developer</li>
+            <li>The official RERA website</li>
+            <li>Government-approved documentation</li>
+          </ul>
+
+          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">
+            Purpose of Website
+          </h2>
+          <p>This website is intended for:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Marketing communication</li>
+            <li>Informational purposes</li>
+            <li>Assisting customers with enquiries and site visits</li>
+          </ul>
+          <p>
+            It does not constitute a legal offer, commitment, or contract of any
+            kind.
+          </p>
+          <p>
+            Final decision regarding pricing, availability, approvals, and
+            allotment lies solely with the developer.
+          </p>
+
+          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">
+            Channel Partner Role
+          </h2>
+          <p>As an authorized channel partner, we assist customers with:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Project information</li>
+            <li>Arranging site visits</li>
+            <li>Coordinating with developer sales teams</li>
+            <li>Guiding the enquiry & booking process</li>
+          </ul>
+          <p>
+            All transactions, payments, and documentation are handled directly
+            by the developer as per their policies and RERA guidelines.
+          </p>
+
+          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">
+            Liability
+          </h2>
+          <p>
+            While every effort is made to ensure that the information on this
+            website is accurate and updated, Jyoti Gupta shall not be
+            responsible for:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Typographical or technical errors</li>
+            <li>Revisions in project plans, pricing, or specifications</li>
+            <li>Decisions made based on website content</li>
+          </ul>
+          <p>
+            Users are responsible for making informed purchase decisions after
+            due verification.
+          </p>
+
+          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">
+            Contact Information
+          </h2>
+          <ul className="list-none pl-0 space-y-2">
+            <li>
+              <strong>Jyoti Gupta</strong>
+            </li>
+            <li>
+              <strong>Email:</strong> Fairdealoffice.email@gmail.com
+            </li>
+            <li>
+              <strong>Phone:</strong> +91 636 624 1261
+            </li>
+            <li>
+              <strong>Address:</strong> Flat No 5066, Tower 5, 6th Floor, Earls
+              Court, ITPL Road, Whitefield, Bengaluru, Karnataka 560048, India
             </li>
           </ul>
         </div>

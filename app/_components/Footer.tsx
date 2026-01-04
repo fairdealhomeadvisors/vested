@@ -120,14 +120,6 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/terms-and-conditions"
-                  className="text-zinc-300 hover:text-white transition-colors duration-200"
-                >
-                  Terms & Conditions
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/disclaimer"
                   className="text-zinc-300 hover:text-white transition-colors duration-200"
                 >

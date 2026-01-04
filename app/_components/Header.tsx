@@ -16,6 +16,7 @@ export default function Header(props: HeaderProps) {
       <div className="text-white text-2xl">
         <span className="font-semibold mr-1">{props.title?.split(" ")[0]}</span>
         <span>{props.title?.split(" ")?.slice(1).join(" ")}</span>
+        <div className="text-xs text-zinc-400 uppercase font-light">Authorized Channel Partner</div>
       </div>
       <div className="items-center mx-5 gap-2 hidden md:flex">
         <Link

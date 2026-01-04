@@ -108,6 +108,32 @@ export default function Page() {
       <section id="FAQ" className="max-w-[1400px] mx-auto">
         <Faq faq={content.FAQ} />
       </section>
+      {/* Disclaimer Section */}
+      <section className="bg-zinc-100 py-10 px-6">
+        <div className="max-w-[1400px] mx-auto">
+          <h3 className="text-sm font-semibold text-zinc-700 mb-3">
+            Disclaimer:
+          </h3>
+          <p className="text-xs text-zinc-600 leading-relaxed">
+            This website is owned and managed by Jyoti Gupta, an authorized
+            channel partner for the Nikoo Garden Estate project.
+          </p>
+          <p className="text-xs text-zinc-600 mt-2">
+            <strong>Channel Partner RERA No:</strong>{" "}
+            PRM/KA/RERA/1251/310/AG/251216/006620
+          </p>
+          <p className="text-xs text-zinc-600">
+            <strong>Project RERA No:</strong>{" "}
+            PRM/KA/RERA/1251/446/PR/200421/003456
+          </p>
+          <p className="text-xs text-zinc-500 mt-3 leading-relaxed">
+            All project information, images, brochures, and specifications are
+            shared as received from the developer and are for information
+            purposes only. Buyers are advised to verify details with the
+            developer and on the official RERA website.
+          </p>
+        </div>
+      </section>
       <Footer />
     </main>
   );
