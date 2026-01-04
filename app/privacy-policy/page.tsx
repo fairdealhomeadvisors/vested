@@ -22,157 +22,157 @@ export default function PrivacyPolicy() {
             Back to Home
           </Link>
           <h1 className="text-4xl md:text-5xl font-semibold">Privacy Policy</h1>
-          <p className="mt-4 text-zinc-400">Last updated: December 15, 2024</p>
+          <p className="mt-4 text-zinc-400">Last updated: January 4, 2026</p>
         </div>
       </div>
 
       {/* Content */}
-      <div className="max-w-4xl mx-auto px-6 py-12 md:py-16">
+      <div className="max-w-4xl mx-auto px-6 py-12 md:py-16 font-clash-display">
         <div className="prose prose-lg max-w-none prose-headings:font-semibold prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-p:text-zinc-600 prose-li:text-zinc-600">
           <p className="lead text-lg text-zinc-700">
-            At Fairdeal Home Advisors, we are committed to protecting your
-            privacy. This Privacy Policy explains how we collect, use, disclose,
-            and safeguard your information when you visit our website or engage
-            with our services.
+            This website is owned and managed by Jyoti Gupta, an authorized
+            channel partner for the Nikoo Garden Estate project (Project RERA
+            No: PRM/KA/RERA/1251/446/PR/200421/003456).
+          </p>
+          <p className="text-lg text-zinc-700">
+            We respect your privacy and are committed to protecting the personal
+            information you share with us.
           </p>
 
-          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">1. Information We Collect</h2>
+          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">
+            Information We Collect
+          </h2>
           <p>
-            We may collect information about you in a variety of ways,
-            including:
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6 mb-3 text-zinc-800">Personal Data</h3>
-          <p>
-            Personally identifiable information that you voluntarily provide to
-            us when expressing interest in our properties or services,
-            including:
+            When you submit an enquiry or contact us, we may collect:
           </p>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Name and contact information (email address, phone number)</li>
-            <li>Mailing address</li>
-            <li>Property preferences and requirements</li>
-            <li>Financial information relevant to property purchases</li>
-            <li>Any other information you choose to provide</li>
+            <li>Name</li>
+            <li>Phone number</li>
+            <li>Email address</li>
+            <li>City / Location</li>
+            <li>Property interest details</li>
+            <li>Communication preferences</li>
           </ul>
-
-          <h3 className="text-xl font-semibold mt-6 mb-3 text-zinc-800">Automatically Collected Data</h3>
           <p>
-            When you access our website, we may automatically collect certain
-            information, including:
+            We do not collect passwords, financial data, or sensitive personal
+            information.
           </p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Device information (browser type, operating system)</li>
-            <li>IP address and location data</li>
-            <li>Pages visited and time spent on our website</li>
-            <li>Referring website addresses</li>
-            <li>Cookies and similar tracking technologies</li>
-          </ul>
 
-          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">2. How We Use Your Information</h2>
-          <p>
-            We may use the information we collect for various purposes,
-            including:
-          </p>
+          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">
+            How We Use Your Information
+          </h2>
+          <p>Your information may be used to:</p>
           <ul className="list-disc pl-6 space-y-2">
-            <li>To provide, operate, and maintain our services</li>
-            <li>To respond to your inquiries and provide customer support</li>
-            <li>To send you information about properties that match your preferences</li>
-            <li>To process transactions and send related communications</li>
-            <li>To improve our website and services</li>
-            <li>To comply with legal obligations</li>
-            <li>To send promotional communications (with your consent)</li>
-          </ul>
-
-          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">3. Disclosure of Your Information</h2>
-          <p>
-            We may share your information in the following situations:
-          </p>
-          <ul className="list-disc pl-6 space-y-2">
+            <li>Contact you regarding the Nikoo Garden Estate project</li>
+            <li>Share pricing, floor plans, and availability updates</li>
+            <li>Arrange site visits and consultations</li>
             <li>
-              <strong>Business Partners:</strong> With trusted partners who assist us in
-              operating our website and conducting business
-            </li>
-            <li>
-              <strong>Legal Requirements:</strong> If required by law or in response to valid
-              legal processes
-            </li>
-            <li>
-              <strong>Business Transfers:</strong> In connection with any merger, sale, or
-              acquisition of company assets
-            </li>
-            <li>
-              <strong>With Your Consent:</strong> For any other purpose disclosed at the time
-              of collection
+              Coordinate with the developer&apos;s authorized sales team (where
+              required)
             </li>
           </ul>
-
-          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">4. Data Security</h2>
           <p>
-            We implement appropriate technical and organizational security
-            measures to protect your personal information. However, no method of
-            transmission over the Internet or electronic storage is 100% secure,
-            and we cannot guarantee absolute security.
+            Your details may be shared only with the project developer or their
+            official representatives for the purpose of assisting your enquiry.
           </p>
+          <p>We do not sell, trade, or misuse your personal data.</p>
 
-          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">5. Your Rights</h2>
+          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">
+            Communication Consent
+          </h2>
           <p>
-            Depending on your location, you may have certain rights regarding
-            your personal information, including:
+            By submitting your details, you authorize Jyoti Gupta and project
+            representatives to contact you via:
           </p>
           <ul className="list-disc pl-6 space-y-2">
-            <li>The right to access your personal data</li>
-            <li>The right to request correction of inaccurate data</li>
-            <li>The right to request deletion of your data</li>
-            <li>The right to object to or restrict processing</li>
-            <li>The right to data portability</li>
-            <li>The right to withdraw consent</li>
+            <li>Phone</li>
+            <li>SMS</li>
+            <li>WhatsApp</li>
+            <li>Email</li>
+          </ul>
+          <p>
+            You may request to stop communication at any time by contacting us.
+          </p>
+
+          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">
+            Data Security
+          </h2>
+          <p>
+            We take reasonable technical and organizational measures to protect
+            your data from:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Unauthorized access</li>
+            <li>Misuse</li>
+            <li>Loss or alteration</li>
+          </ul>
+          <p>
+            However, transmission of information over the internet is at your
+            own risk.
+          </p>
+
+          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">
+            Cookies & Third-Party Tools
+          </h2>
+          <p>This website may use tools such as:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Google Ads / Analytics</li>
+            <li>Meta advertising tools</li>
+            <li>Lead tracking systems</li>
+          </ul>
+          <p>
+            These may collect non-personal browsing data to improve ad relevance
+            and website experience.
+          </p>
+          <p>You may disable cookies in your browser if you prefer.</p>
+
+          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">
+            External Links
+          </h2>
+          <p>
+            This website may contain links to developer websites or third-party
+            portals.
+          </p>
+          <p>
+            We are not responsible for their content or privacy practices.
+          </p>
+
+          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">
+            Your Contact & Correction Rights
+          </h2>
+          <p>You may contact us to:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Update your details</li>
+            <li>Request deletion of your data</li>
+            <li>Withdraw communication consent</li>
           </ul>
 
-          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">6. Cookies and Tracking Technologies</h2>
-          <p>
-            We use cookies and similar tracking technologies to track activity
-            on our website and hold certain information. You can instruct your
-            browser to refuse all cookies or indicate when a cookie is being
-            sent. However, some features of our website may not function
-            properly without cookies.
-          </p>
-
-          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">7. Third-Party Links</h2>
-          <p>
-            Our website may contain links to third-party websites. We have no
-            control over and assume no responsibility for the content, privacy
-            policies, or practices of any third-party sites or services.
-          </p>
-
-          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">8. Children&apos;s Privacy</h2>
-          <p>
-            Our services are not intended for individuals under the age of 18.
-            We do not knowingly collect personal information from children. If
-            you are a parent or guardian and believe your child has provided us
-            with personal information, please contact us.
-          </p>
-
-          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">9. Changes to This Privacy Policy</h2>
-          <p>
-            We may update our Privacy Policy from time to time. We will notify
-            you of any changes by posting the new Privacy Policy on this page
-            and updating the &quot;Last updated&quot; date.
-          </p>
-
-          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">10. Contact Us</h2>
-          <p>
-            If you have any questions about this Privacy Policy, please contact
-            us at:
-          </p>
+          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">
+            Contact For Privacy Matters
+          </h2>
           <ul className="list-none pl-0 space-y-2">
-            <li><strong>Email:</strong> Fairdealoffice.email@gmail.com</li>
-            <li><strong>Phone:</strong> +91 636 624 1261</li>
             <li>
-              <strong>Address:</strong> Flat No 5066, Tower 5, 6th Floor, Earls Court, ITPL Road,
-              Whitefield, Bengaluru, Karnataka 560048, India
+              <strong>Jyoti Gupta</strong>
+            </li>
+            <li>
+              <strong>Email:</strong> Fairdealoffice.email@gmail.com
+            </li>
+            <li>
+              <strong>Phone:</strong> +91 636 624 1261
+            </li>
+            <li>
+              <strong>Address:</strong> Flat No 5066, Tower 5, 6th Floor, Earls
+              Court, ITPL Road, Whitefield, Bengaluru, Karnataka 560048, India
             </li>
           </ul>
+
+          <h2 className="text-2xl font-semibold mt-6 mb-3 text-zinc-800">
+            Policy Updates
+          </h2>
+          <p>
+            This Privacy Policy may be revised periodically. Continued use of
+            the website constitutes acceptance of the updated policy.
+          </p>
         </div>
       </div>
       <Footer />
